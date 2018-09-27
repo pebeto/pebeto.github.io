@@ -1,0 +1,22 @@
+{
+  "name": "pebeto.github.io",
+  "version": "1.0.0",
+  "description": "My GitHub webpage",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pebeto/pebeto.github.io.git"
+  },
+  "author": "Jose Esparza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pebeto/pebeto.github.io/issues"
+  },
+  "homepage": "https://github.com/pebeto/pebeto.github.io#readme",
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  }
+}
