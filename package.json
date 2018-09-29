@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/pebeto/pebeto.github.io/issues"
   },
-  "homepage": "https://github.com/pebeto/pebeto.github.io#readme",
+  "homepage": "https://pebeto.github.io/",
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
