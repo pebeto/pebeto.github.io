@@ -1,0 +1,26 @@
+body {
+    padding: 150px;
+    background-color: black;
+    color: white;
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Arial";
+    padding-left: 490px;
+    padding-right: 490px;
+}
+
+.heart {
+    text-align: center;
+}
+
+.ily {
+    text-align: center;
+    color: red;
+    font-size: 100px;
+    font-weight: bold;
+    font-family: "Arial";
+    padding-top: 10px;
+}
