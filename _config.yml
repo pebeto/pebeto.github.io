@@ -1,14 +1,20 @@
 # Site settings
-title: Jose Esparza | Análisis y Crítica
-description: "A minimal blog template, build with Jekyll."
-url: "http://www.jacoporabolini.com/emerald"
+title: El objeto
+description: "Análisis y Crítica"
+url: "https://pebeto.github.io/"
 author:
-  name: "Jacopo Rabolini"
-  email: "hello@jacoporabolini.com"
-  url: "http://www.jacoporabolini.com"
+  name: "Jose Esparza"
+  email_address: "joseesparza@tutanota.com"
+  github_profile: "https://github.com/pebeto"
+  twitter_profile: "https://twitter.com/pebeto99"
+  linkedin_profile: "https://linkedin.com/in/josesparza"
+
+emerald: 
+  site: "https://github.com/KingFelix/emerald"
+  author: "https://github.com/KingFelix"
 
 # Build settings
-baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
+baseurl: /
 markdown: kramdown
 source: .
 destination: ./_site
@@ -29,9 +35,5 @@ defaults:
 plugins:
   - jekyll-paginate
 
-github_profile: "https://github.com/pebeto"
-
 # Options
-custom_header: false
-custom_nav_footer: false
 reverse: false
