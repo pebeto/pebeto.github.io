@@ -137,7 +137,7 @@ En este nuevo bloque vemos nuevos operadores, los cuales explicaré de una maner
 La nueva regla lo que hace es agarrar uno por uno a cada uno de los archivos contenidos en el directorio `src`, 
 para luego compilarlos y guardarlos como archivos objeto en el directorio `obj`.
 
-Se ve bien... ¿Cierto? Pues no, aún no está en su forma más poderosa. Si se han dado cuenta, los archivos objetos
+Se ve bien... ¿Cierto? Pues no, aún no está en su forma más poderosa. Si se han dado cuenta, los archivos objeto
 aún siguen siendo escritos de manera estática... ¡Y eso no queremos!. Para solucionar eso, haremos un simple truco:
 
 *Como ya sabemos que cada archivo fuente se convertirá en un archivo objeto, entonces guardaremos cada uno de esos 
