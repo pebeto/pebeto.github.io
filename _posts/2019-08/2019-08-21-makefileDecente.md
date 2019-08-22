@@ -78,14 +78,14 @@ Un archivo makefile simple puede verse de la siguiente manera.
 
 ```make
 ellanotequiere: src/main.cpp src/Ella.cpp
-    g++ -o bin/ellanotequiere src/main.cpp src/Ella.cpp -I include
+	g++ -o bin/ellanotequiere src/main.cpp src/Ella.cpp -I include
 ```
 
 Para entender mejor el bloque, separemos los componentes en una estructura general.
 
 ```make
 salida: entrada
-    acción
+	acción
 ```
 
 Se dice que para cada entrada se ejecutará una acción que conllevará a una o varias salidas. Cada línea se hace
@@ -101,7 +101,7 @@ IDIR = include
 OUT = bin/ellanotequiere
 
 ellanotequiere: $(SRCS)
-    $(CC) -o $(OUT) $(SRCS) -I $(IDIR)
+	$(CC) -o $(OUT) $(SRCS) -I $(IDIR)
 ```
 
 ¿Ven la diferencia? Esto hace que nuestro makefile sea más legible y mantenible. **OJO:** Tengan en cuenta que 
