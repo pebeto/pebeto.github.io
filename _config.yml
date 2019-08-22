@@ -1,5 +1,6 @@
 # Site settings
-title: El objeto
+title: El
+title1: objeto
 description: "Análisis y Crítica"
 url: "https://pebeto.github.io/"
 author:
@@ -15,7 +16,7 @@ emerald:
 
 # Build settings
 baseurl: /
-markdown: kramdown
+markdwon: kramdown
 source: .
 destination: ./_site
 permalink: /:title
