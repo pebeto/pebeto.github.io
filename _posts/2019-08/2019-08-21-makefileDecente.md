@@ -40,7 +40,8 @@ Con tan solo escribir `make` en el terminal todo el programa comenzó a compilar
 ya estaba todo listo. Al igual que los archivos de cabecera, en la universidad nunca nos explicaron sobre aquel santo grial.
 Y aquí me encuentro hoy, tratando de explicar cómo es que funciona aquel milagro de la vida.
 
-Un `Makefile` es un archivo que **automatiza la compilación**. Eso es todo, simple y sencillo de explicar.
+Un `Makefile` es un archivo con una serie de instrucciones que permite al programa `make` poder **automatizar la compilación**. 
+Eso es todo, simple y sencillo de explicar.
 En vez de estar compilando cada parte del proyecto a mano como loco, se hace uso de aquel archivo para decirle
 al compilador y al enlazador "Oigan, quiero que hagan esto mientras me tomo un tecito".
 
@@ -195,3 +196,6 @@ clean: $(OBJS)
 ```
 
 Y listo. Si deseas ver más de cerca el proyecto, puedes descargarlo [aquí](https://github.com/pebeto/ellanotequiere).
+
+**Para leer más:**
+[GNU make](https://www.gnu.org/software/make/manual/make.html)
