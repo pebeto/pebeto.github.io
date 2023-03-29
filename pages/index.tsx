@@ -29,42 +29,59 @@ export default function Home() {
             </Text>
             <Text p>
               I studied in{' '}
-              <a href="https://www.upn.edu.pe/">
+              <a href="https://www.upn.edu.pe/" target="_blank">
                 Universidad Privada del Norte
               </a>{' '}
               and received as a Bachelor in Software Engineering. My bachelor
               research project was highlighted due to subject innovation in my
               alma mater, as well as presented in{' '}
-              <a href="https://smiles.skoltech.ru/school-2020">SMILES 2020</a>{' '}
+              <a href="https://smiles.skoltech.ru/school-2020" target="_blank">
+                SMILES 2020
+              </a>{' '}
               as a research poster.
             </Text>
             <Text p>
               As part of the first{' '}
-              <a href="https://www.repuprogram.org/repu-cs">
+              <a href="https://www.repuprogram.org/repu-cs" target="_blank">
                 REPU Computer Science
               </a>{' '}
               cohort, I presented and published a{' '}
-              <a href="https://link.springer.com/chapter/10.1007/978-3-030-91434-9_18">
+              <a
+                href="https://link.springer.com/chapter/10.1007/978-3-030-91434-9_18"
+                target="_blank"
+              >
                 research paper
               </a>{' '}
               about COVID-19 vaccine roll social reaction and it was indexed in
               the{' '}
-              <a href="https://pesquisa.bvsalud.org/global-literature-on-novel-coronavirus-2019-ncov/resource/pt/covidwho-1593151?lang=en">
+              <a
+                href="https://pesquisa.bvsalud.org/global-literature-on-novel-coronavirus-2019-ncov/resource/pt/covidwho-1593151?lang=en"
+                target="_blank"
+              >
                 WHO COVID-19 Research Database
               </a>
               . I was mentored by{' '}
-              <a href="https://www.linkedin.com/in/gissella-bejarano-phd-3789b01a/">
+              <a
+                href="https://www.linkedin.com/in/gissella-bejarano-phd-3789b01a/"
+                target="_blank"
+              >
                 Gissella Bejarano
               </a>
               , being part of the Machine Learning Research Group from{' '}
-              <a href="https://www.binghamton.edu/computer-science/index.html">
+              <a
+                href="https://www.binghamton.edu/computer-science/index.html"
+                target="_blank"
+              >
                 Binghamton University Computer Science Department
               </a>
               .
             </Text>
             <Text>
               I play vocals in a band called{' '}
-              <a href="https://pebeto.github.io/elmejorveranodemivida/">
+              <a
+                href="https://pebeto.github.io/elmejorveranodemivida/"
+                target="_blank"
+              >
                 El mejor verano de mi vida
               </a>{' '}
               (The best summer of my life). We were recognized as part of the
