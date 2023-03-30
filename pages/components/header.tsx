@@ -15,7 +15,9 @@ export default function Header() {
         <Spacer inline={true} />
         <Link href="/tools">Tools I use</Link>
         <Spacer inline={true} />
-        <Link href="/resume.pdf" target="_blank">Download my resume!</Link>
+        <Link href="/resume.pdf" target="_blank">
+          Download my resume!
+        </Link>
       </Grid>
     </Grid.Container>
   );
