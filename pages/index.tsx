@@ -6,7 +6,7 @@ import { Github, Linkedin, Twitter, Book } from '@geist-ui/icons';
 
 export default function Home() {
   return (
-    <Page>
+    <Page style={{ padding: "0 0 0 0" }}>
       <Page.Header>
         <Header />
       </Page.Header>

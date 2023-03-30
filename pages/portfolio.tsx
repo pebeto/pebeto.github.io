@@ -1,18 +1,11 @@
 import path from 'path';
 import { promises as fs } from 'fs';
+import { Children } from 'react';
 
 import Header from './components/header';
 import Footer from './components/footer';
 
-import {
-  Card,
-  Grid,
-  Image,
-  Link,
-  Page,
-  Spacer,
-  Text,
-} from '@geist-ui/core';
+import { Card, Grid, Image, Link, Page, Spacer, Text } from '@geist-ui/core';
 
 type Notebook = {
   title: string;
@@ -63,16 +56,20 @@ export default function Portfolio({ notebooks }: any) {
             </Text>
             <Spacer />
             <Grid lg={30} xl>
-              {notebooks.map((notebook: Notebook) => (
-                <>
-                  <Link href={notebook.link} target="_blank">
-                    <Card type="secondary" hoverable>
-                      <Text b>{notebook.title}</Text>
-                    </Card>
-                  </Link>
-                  <Spacer w={1} />
-                </>
-              ))}
+              {Children.toArray(
+                notebooks.map((notebook: Notebook) => (
+                  <>
+                    <Link href={notebook.link} target="_blank">
+                      <Card type="secondary" hoverable>
+                        <Text b>
+                          {notebook.title}
+                        </Text>
+                      </Card>
+                    </Link>
+                    <Spacer w={1} />
+                  </>
+                ))
+              )}
             </Grid>
           </Grid>
         </Grid.Container>
