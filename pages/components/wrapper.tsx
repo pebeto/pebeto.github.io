@@ -5,16 +5,16 @@ import Footer from './footer';
 
 export default function Wrapper({ children }: any) {
   return (
-    <Page style={{ padding: '0 0 0 0' }}>
-      <Page.Header>
-        <Header />
-      </Page.Header>
-      <Page.Content>
-        <Grid.Container justify="center">{children}</Grid.Container>
-      </Page.Content>
-      <Page.Footer>
-        <Footer />
-      </Page.Footer>
-    </Page>
+      <Page style={{ padding: '0 0 0 0' }}>
+        <Page.Header>
+          <Header />
+        </Page.Header>
+        <Page.Content>
+          <Grid.Container justify="center">{children}</Grid.Container>
+        </Page.Content>
+        <Page.Footer>
+          <Footer />
+        </Page.Footer>
+      </Page>
   );
 }
