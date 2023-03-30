@@ -27,6 +27,7 @@ export const getStaticProps = async () => {
   };
 };
 
+Portfolio.displayName = 'Portfolio';
 export default function Portfolio({ notebooks }: any) {
   return (
     <Wrapper>
