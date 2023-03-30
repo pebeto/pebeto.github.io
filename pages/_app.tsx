@@ -14,6 +14,10 @@ export default function App({ Component, pageProps }: AppProps) {
           property="og:description"
           content="Data Science, machine Learning, Python & Julia"
         />
+        <meta
+          name="google-site-verification"
+          content="Z8eB-LcCtKoVuPT1qEVRbQzeV5rpJ7Tt_OHjkkJJrKM"
+        />
       </Head>
       <GeistProvider>
         <CssBaseline />
