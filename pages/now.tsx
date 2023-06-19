@@ -1,4 +1,4 @@
-import Wrapper from "./components/wrapper";
+import Wrapper from "../components/wrapper";
 import { Image, Grid, Display, Link } from "@geist-ui/core";
 
 Now.displayName = "Now";

@@ -1,7 +1,7 @@
 import { Image, Grid, Spacer, Text, Link } from "@geist-ui/core";
 import { Github, Linkedin, Twitter, Book } from "@geist-ui/icons";
 
-import Wrapper from "./components/wrapper";
+import Wrapper from "../components/wrapper";
 
 Home.displayName = "Home";
 export default function Home() {

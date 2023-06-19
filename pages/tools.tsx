@@ -1,6 +1,6 @@
 import { Grid, Spacer, Text, Image, Display, Link } from "@geist-ui/core";
 
-import Wrapper from "./components/wrapper";
+import Wrapper from "../components/wrapper";
 
 Tools.displayName = "Tools";
 export default function Tools() {
