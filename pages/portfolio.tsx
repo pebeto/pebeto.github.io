@@ -1,33 +1,22 @@
-import path from 'path';
-import { promises as fs } from 'fs';
-import { Children } from 'react';
-import { Card, Grid, Image, Link, Spacer, Text } from '@geist-ui/core';
+import { Children } from "react";
+import { ExternalLink } from "@geist-ui/icons";
+import { Card, Grid, Image, Link, Spacer, Text } from "@geist-ui/core";
 
-import Wrapper from './components/wrapper';
+import Wrapper from "./components/wrapper";
+import { Notebook } from "./types/notebook";
+import { getNotebooks } from "./services/notebooks";
 
-type Notebook = {
-  title: string;
-  link: string;
-};
-
-export const getStaticProps = async () => {
-  const notebooksDirectory = path.join(process.cwd(), 'public/notebooks');
-  const filenames = await fs.readdir(notebooksDirectory);
-  const notebooks: Notebook[] = filenames.map((filename) => {
-    return {
-      title: filename.split('.')[0],
-      link: `notebooks/${filename}`,
-    };
-  });
+export async function getStaticProps() {
+  const notebooks = await getNotebooks();
 
   return {
     props: {
       notebooks: await Promise.all(notebooks),
     },
   };
-};
+}
 
-Portfolio.displayName = 'Portfolio';
+Portfolio.displayName = "Portfolio";
 export default function Portfolio({ notebooks }: any) {
   return (
     <Wrapper>
@@ -36,16 +25,17 @@ export default function Portfolio({ notebooks }: any) {
       </Grid>
       <Spacer w={5} />
       <Grid lg direction="column">
+        <h3>Notebooks</h3>
         <Text p>
-          I'm an enthusiast of{' '}
-          <a href="https://julialang.org/" target="_blank">
+          I'm an enthusiast of{" "}
+          <Link href="https://julialang.org/" target="_blank" color icon>
             Julia Programming Language
-          </a>
+          </Link>
           , so I decided to translate every Python project from my old portfolio
-          into Julia and using{' '}
-          <a href="https://plutojl.org/" target="_blank">
+          into Julia and using{" "}
+          <Link href="https://plutojl.org/" target="_blank" color icon>
             Pluto.jl
-          </a>{' '}
+          </Link>{" "}
           for reactive notebooks (they look great!).
         </Text>
         <Spacer />
@@ -55,7 +45,9 @@ export default function Portfolio({ notebooks }: any) {
               <>
                 <Link href={notebook.link} target="_blank">
                   <Card type="secondary" hoverable>
-                    <Text b>{notebook.title}</Text>
+                    <Text b>
+                      {notebook.title} <ExternalLink size={15} />
+                    </Text>
                   </Card>
                 </Link>
                 <Spacer w={1} />

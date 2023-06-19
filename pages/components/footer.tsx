@@ -1,4 +1,4 @@
-import { Text, Grid } from '@geist-ui/core';
+import { Text, Grid } from "@geist-ui/core";
 
 export default function Footer() {
   return (
