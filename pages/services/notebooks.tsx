@@ -1,13 +1,14 @@
 import path from "path";
-import { promises as fs } from "fs";
 
 import { Notebook } from "../types/notebook";
 
-export async function getNotebooks(): Promise<Notebook[]> {
+export async function getNotebooks(
+  readFunction: Function
+): Promise<Notebook[]> {
   const notebooksDirectory = path.join(process.cwd(), "public/notebooks");
-  const filenames = await fs.readdir(notebooksDirectory);
+  const filenames = await readFunction(notebooksDirectory);
 
-  return filenames.map((filename) => {
+  return filenames.map((filename: string) => {
     return {
       title: filename.split(".")[0],
       link: `notebooks/${filename}`,

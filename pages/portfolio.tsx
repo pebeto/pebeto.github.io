@@ -1,4 +1,5 @@
 import { Children } from "react";
+import { promises as fs } from "fs";
 import { ExternalLink } from "@geist-ui/icons";
 import { Card, Grid, Image, Link, Spacer, Text } from "@geist-ui/core";
 
@@ -7,7 +8,7 @@ import { Notebook } from "./types/notebook";
 import { getNotebooks } from "./services/notebooks";
 
 export async function getStaticProps() {
-  const notebooks = await getNotebooks();
+  const notebooks = await getNotebooks(fs.readdir);
 
   return {
     props: {
