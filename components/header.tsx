@@ -23,7 +23,7 @@ export default function Header() {
         <Spacer inline={true} />
         <Link href="/portfolio">Portfolio</Link>
         <Spacer inline={true} />
-        <Link href="/tools">Tools I use</Link>
+        <Link href="/tools">Tools and Gear</Link>
         <Spacer inline={true} />
         <GeistLink href="/resume.pdf" target="_blank" icon color>
           Download my resume

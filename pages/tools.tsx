@@ -22,7 +22,7 @@ export default function Tools() {
         <Text p>
           When I started my journey in the world of programming, I was using
           Windows 7. My first programming course was in C++ and installing
-          libraries was a pain. So I decided to switch to Linux. I was using{" "}
+          libraries was a pain. So I decided to switch to GNU/Linux. I was using{" "}
           <Link href="https://elementary.io/" target="_blank" icon color>
             Elementary OS
           </Link>{" "}
@@ -51,22 +51,55 @@ export default function Tools() {
           and I'm using it since then. I'm really happy with it and I'm not
           planning to switch to another distro for a while.
         </Text>
+        <Text p>
+          Also I'm using MacOS Ventura on my laptop for daily and common usage.
+          I'm not a big fan of Apple, but the entire OS nice integration is
+          something admirable.
+        </Text>
         <Text h4>Terminal emulator</Text>
         <Text p>
           Choosing the right terminal emulator is essential for a good workflow.
           There are a lot of options for all types of users (focused on speed,
           customization, extra features, etc.). I'm using{" "}
           <Link
-            href="https://gitlab.gnome.org/raggesilver/blackbox"
+            href="https://wezfurlong.org/wezterm/"
             color
             icon
             target="_blank"
           >
-            Blackbox
+            WezTerm
           </Link>{" "}
           because it's fast, minimal, lightweight, and has the customization
           options I need.
         </Text>
+        <Text p>
+          On my laptop, I'm using{" "}
+          <Link href="https://www.warp.dev" color icon target="_blank">
+            Warp
+          </Link>{" "}
+          . Please developers, create a version for GNU/Linux!!!
+        </Text>
+        <Display
+          caption={
+            <p>
+              <Link
+                href="https://gitlab.gnome.org/raggesilver/blackbox"
+                icon
+                color
+                target="_blank"
+              >
+                Blackbox
+              </Link>{" "}
+              window with{" "}
+              <Link href="https://starship.rs/" target="_blank" color icon>
+                Starship
+              </Link>{" "}
+              prompt
+            </p>
+          }
+        >
+          <Image src="terminal.png" />
+        </Display>
         <Text h4>Text editor & IDEs</Text>
         <Text p>
           I usually avoid using IDEs. They are great for beginners, but full of
@@ -121,29 +154,6 @@ export default function Tools() {
           installing dependencies. For everything else, they have a lot of
           things that you will only use once in your life.
         </Text>
-      </Grid>
-      <Grid xs={30} sm={30} md={20} lg={12} xl={10}>
-        <Display
-          caption={
-            <p>
-              <Link
-                href="https://gitlab.gnome.org/raggesilver/blackbox"
-                icon
-                color
-                target="_blank"
-              >
-                Blackbox
-              </Link>{" "}
-              window with{" "}
-              <Link href="https://starship.rs/" target="_blank" color icon>
-                Starship
-              </Link>{" "}
-              prompt
-            </p>
-          }
-        >
-          <Image src="terminal.png" />
-        </Display>
       </Grid>
     </Wrapper>
   );

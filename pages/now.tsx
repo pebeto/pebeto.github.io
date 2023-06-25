@@ -1,6 +1,8 @@
 import Wrapper from "../components/wrapper";
 import { Image, Grid, Display, Link } from "@geist-ui/core";
 
+import getDaysSinceDate from "@/utils";
+
 Now.displayName = "Now";
 export default function Now() {
   return (
@@ -27,6 +29,7 @@ export default function Now() {
           <li>Learning to use org-mode because I'm a nerd</li>
           <li>Thinking about switching to Emacs (remember I'm a nerd)</li>
         </ul>
+        <p>Last update: {getDaysSinceDate("2023-06-19")} days ago</p>
       </Grid>
       <Grid xs={30} sm={30} md={20} lg={10} xl={8}>
         <Display

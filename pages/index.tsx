@@ -7,7 +7,7 @@ Home.displayName = "Home";
 export default function Home() {
   return (
     <Wrapper>
-      <Grid xs={30} sm={15} md={15} lg={5} xl={5}>
+      <Grid xs={30} sm={15} md={15} lg={8} xl={5}>
         <Image src="profile.jpeg" alt="Jose Esparza" />
       </Grid>
       <Spacer w={5} />
