@@ -23,7 +23,7 @@ export default function Portfolio({ notebooks }: any) {
       <Grid.Container gap={2}>
         <Grid direction="column" xs={0} sm={0} md={10} lg={8}>
           <Display caption={<Text p>A cool neural network</Text>}>
-            <Image src="nn.png"></Image>
+            <Image alt="A cool neural network" src="nn.png"></Image>
           </Display>
         </Grid>
         <Grid direction="column" sm={25} md={14} lg={14}>

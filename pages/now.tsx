@@ -48,7 +48,10 @@ export default function Now() {
               </Text>
             }
           >
-            <Image src="emvdmv.jpeg" />
+            <Image
+              alt="Playing with El Mejor Verano de mi Vida"
+              src="emvdmv.jpeg"
+            />
           </Display>
         </Grid>
       </Grid.Container>

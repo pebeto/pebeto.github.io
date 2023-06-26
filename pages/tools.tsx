@@ -181,7 +181,10 @@ export default function Tools() {
                 </Text>
               }
             >
-              <Image src="terminal.png" />
+              <Image
+                alt="WezTerm window with Starship prompt"
+                src="terminal.png"
+              />
             </Display>
           </Grid>
         </Grid.Container>
