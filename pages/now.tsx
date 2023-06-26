@@ -16,23 +16,21 @@ export default function Now() {
             </Link>
             ?
           </Text>
-          <Text p>
-            <ul>
-              <li>
-                Recording my band's album (a truly masterpiece; if you are a
-                record label, please hire us)
-              </li>
-              <li>Planning my first mountain trip with my girlfriend</li>
-              <li>Trying to finish a research paper I started 1 year ago</li>
-              <li>
-                Looking for a MsC grant in Computer Science (if you are a
-                professor and you are reading this, please consider me)
-              </li>
-              <li>Learning to use org-mode because I'm a nerd</li>
-              <li>Thinking about switching to Emacs (remember I'm a nerd)</li>
-            </ul>
-            Last update: {getDaysSinceDate("2023-06-19")} days ago
-          </Text>
+          <ul>
+            <li>
+              Recording my band's album (a truly masterpiece; if you are a
+              record label, please hire us)
+            </li>
+            <li>Planning my first mountain trip with my girlfriend</li>
+            <li>Trying to finish a research paper I started 1 year ago</li>
+            <li>
+              Looking for a MsC grant in Computer Science (if you are a
+              professor and you are reading this, please consider me)
+            </li>
+            <li>Learning to use org-mode because I'm a nerd</li>
+            <li>Thinking about switching to Emacs (remember I'm a nerd)</li>
+          </ul>
+          Last update: {getDaysSinceDate("2023-06-19")} days ago
         </Grid>
         <Grid direction="column" xs={25} sm={8} md={10} lg={10}>
           <Display
