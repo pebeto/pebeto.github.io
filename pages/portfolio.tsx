@@ -1,7 +1,6 @@
 import { Children } from "react";
 import { promises as fs } from "fs";
-import { ExternalLink } from "@geist-ui/icons";
-import { Card, Grid, Image, Link, Display, Spacer, Text } from "@geist-ui/core";
+import { Grid, Image, Link, Display, Spacer, Text } from "@geist-ui/core";
 
 import Wrapper from "../components/wrapper";
 import { Notebook } from "../types/notebook";
@@ -22,7 +21,7 @@ export default function Portfolio({ notebooks }: any) {
   return (
     <Wrapper>
       <Grid.Container gap={2}>
-        <Grid direction="column" xs={0} sm={0} md={10} lg={10}>
+        <Grid direction="column" xs={0} sm={0} md={10} lg={8}>
           <Display caption={<Text p>A cool neural network</Text>}>
             <Image src="nn.png"></Image>
           </Display>
@@ -42,20 +41,20 @@ export default function Portfolio({ notebooks }: any) {
             for reactive notebooks (they look great!).
           </Text>
           <Grid lg={30} xl>
-            {Children.toArray(
-              notebooks.map((notebook: Notebook) => (
-                <>
-                  <Link href={notebook.link} target="_blank">
-                    <Card type="secondary" hoverable>
-                      <Text b>
-                        {notebook.title} <ExternalLink size={15} />
-                      </Text>
-                    </Card>
-                  </Link>
-                  <Spacer w={1} />
-                </>
-              ))
-            )}
+            <ul>
+              {Children.toArray(
+                notebooks.map((notebook: Notebook) => (
+                  <>
+                    <li>
+                      <Link href={notebook.link} target="_blank" color icon>
+                        <Text b>{notebook.title}</Text>
+                      </Link>
+                    </li>
+                    <Spacer inline={false} />
+                  </>
+                ))
+              )}
+            </ul>
           </Grid>
         </Grid>
       </Grid.Container>

@@ -7,12 +7,12 @@ export default function Home() {
   return (
     <Wrapper>
       <Grid.Container gap={2}>
-        <Grid direction="column" xs={25} sm={8} md={8} lg={8}>
+        <Grid direction="column" xs={25} sm={8} md={8} lg={5}>
           <Display caption={<Text p>Eating soup</Text>}>
             <Image src="profile.jpeg" alt="Jose Esparza" />
           </Display>
         </Grid>
-        <Grid direction="column" xs={25} sm={15} md={15} lg={15}>
+        <Grid direction="column" xs={25} sm={15} md={15} lg={19}>
           <h3>Welcome!</h3>
           <Text p>
             I'm a Software Engineer with extensive knowledge in Machine
