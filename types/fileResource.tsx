@@ -1,4 +1,4 @@
-export type Notebook = {
+export type FileResource = {
     title: string;
     link: string;
 };

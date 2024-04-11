@@ -1,10 +1,17 @@
+import {
+    Grid,
+    Link,
+    Text,
+    Image,
+    Spacer,
+    Display,
+} from "@geist-ui/core";
 import { Children } from "react";
 import { promises as fs } from "fs";
-import { Grid, Image, Link, Display, Spacer, Text } from "@geist-ui/core";
 
 import Wrapper from "../components/wrapper";
-import { Notebook } from "../types/notebook";
 import { getNotebooks } from "../services/notebooks";
+import { FileResource } from "../types/fileResource";
 
 export async function getStaticProps() {
     const notebooks = await getNotebooks(fs.readdir);
@@ -41,18 +48,20 @@ export default function Portfolio({ notebooks }: any) {
                 </Text>
                 <Grid>
                     <ul>
-                        {Children.toArray(
-                            notebooks.map((notebook: Notebook) => (
-                                <>
-                                    <li>
-                                        <Link href={notebook.link} target="_blank" color icon>
-                                            <Text b>{notebook.title}</Text>
-                                        </Link>
-                                    </li>
-                                    <Spacer inline={false} />
-                                </>
-                            ))
-                        )}
+                        {
+                            Children.toArray(
+                                notebooks.map((notebook: FileResource) => (
+                                    <>
+                                        <li>
+                                            <Link href={notebook.link} target="_blank" color icon>
+                                                <Text b>{notebook.title}</Text>
+                                            </Link>
+                                        </li>
+                                        <Spacer inline={false} />
+                                    </>
+                                ))
+                            )
+                        }
                     </ul>
                 </Grid>
                 <Text p>

@@ -10,7 +10,7 @@ export default function Wrapper({ children }: any) {
                 <Header />
             </Page.Header>
             <Page.Content>
-                <Grid.Container gap={2}>
+                <Grid.Container gap={2} justify="center">
                     {children}
                 </Grid.Container>
             </Page.Content>

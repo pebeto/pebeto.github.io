@@ -1,10 +1,10 @@
 import path from "path";
 
-import { Notebook } from "../types/notebook";
+import { FileResource } from "../types/fileResource";
 
 export async function getNotebooks(
     readFunction: Function
-): Promise<Notebook[]> {
+): Promise<FileResource[]> {
     const notebooksDirectory = path.join(process.cwd(), "public/notebooks");
     const filenames = await readFunction(notebooksDirectory);
 
