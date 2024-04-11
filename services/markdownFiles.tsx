@@ -3,7 +3,7 @@ import { promises as fs } from "fs";
 
 import { FileResource } from "../types/fileResource";
 
-export function getMarkdownFilesDirectory(): string {
+function getMarkdownFilesDirectory(): string {
     return path.join(process.cwd(), "public/markdown");
 }
 

@@ -1,4 +1,10 @@
-import { Grid, Text, Image, Display, Link } from "@geist-ui/core";
+import {
+    Grid,
+    Link,
+    Text,
+    Image,
+    Display,
+} from "@geist-ui/core";
 
 import Wrapper from "../components/wrapper";
 

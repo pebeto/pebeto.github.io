@@ -1,4 +1,7 @@
-import { Grid, Page } from "@geist-ui/core";
+import {
+    Grid,
+    Page,
+} from "@geist-ui/core";
 
 import Header from "./header";
 import Footer from "./footer";

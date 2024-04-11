@@ -1,9 +1,25 @@
+import {
+    Page,
+    pdfjs,
+    Document,
+} from 'react-pdf';
+import {
+    Grid,
+    Link,
+    Button,
+    Spacer,
+} from "@geist-ui/core";
+import {
+    Download,
+    ChevronLeft,
+    ChevronsLeft,
+    ChevronRight,
+    ChevronsRight
+} from '@geist-ui/icons';
 import { useState } from 'react'
-import { Page, Document, pdfjs } from 'react-pdf'
-import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
-import { Download, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from '@geist-ui/icons'
-import { Grid, Link, Button, Spacer } from "@geist-ui/core";
+import 'react-pdf/dist/Page/AnnotationLayer.css';
+
 import Wrapper from "../components/wrapper";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;

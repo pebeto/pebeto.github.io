@@ -1,6 +1,14 @@
+import {
+    useState,
+    useEffect
+} from "react";
+import {
+    Grid,
+    Text,
+    Button,
+    Spacer,
+} from "@geist-ui/core";
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import { Button, Text, Grid, Spacer } from "@geist-ui/core";
 
 import { getRandomSubheader } from "../services/subheaders";
 

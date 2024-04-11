@@ -1,7 +1,13 @@
-import Wrapper from "../components/wrapper";
-import { Image, Grid, Display, Link, Text } from "@geist-ui/core";
+import {
+    Grid,
+    Link,
+    Text,
+    Image,
+    Display,
+} from "@geist-ui/core";
 
-import getDaysSinceDate from "@/utils";
+import getDaysSinceDate from "../utils";
+import Wrapper from "../components/wrapper";
 
 Now.displayName = "Now";
 export default function Now() {
