@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
     return (
         <>
             <Head>
-                <title>{`${Component.displayName} | Jose's Website`}</title>
+                <title>{`${pageProps.title} | Jose's Website`}</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta property="og:title" content="Jose's Webpage" />
                 <meta

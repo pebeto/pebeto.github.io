@@ -9,7 +9,14 @@ import {
 import getDaysSinceDate from "../utils";
 import Wrapper from "../components/wrapper";
 
-Now.displayName = "Now";
+export async function getStaticProps() {
+    return {
+        props: {
+            title: "Now",
+        },
+    };
+}
+
 export default function Now() {
     return (
         <Wrapper>

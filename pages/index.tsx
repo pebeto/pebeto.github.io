@@ -8,7 +8,14 @@ import {
 
 import Wrapper from "../components/wrapper";
 
-Home.displayName = "Home";
+export async function getStaticProps() {
+    return {
+        props: {
+            title: "Home",
+        },
+    };
+}
+
 export default function Home() {
     return (
         <Wrapper>

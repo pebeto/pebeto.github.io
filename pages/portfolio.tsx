@@ -18,12 +18,12 @@ export async function getStaticProps() {
 
     return {
         props: {
+            title: "Portfolio",
             notebooks: await Promise.all(notebooks),
         },
     };
 }
 
-Portfolio.displayName = "Portfolio";
 export default function Portfolio({ notebooks }: any) {
     return (
         <Wrapper>

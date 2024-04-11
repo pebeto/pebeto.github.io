@@ -24,7 +24,14 @@ import Wrapper from "../components/wrapper";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
-Resume.displayName = "Resume";
+export async function getStaticProps() {
+    return {
+        props: {
+            title: "Resume",
+        },
+    };
+}
+
 export default function Resume() {
     const [numPages, setNumPages] = useState<number>();
     const [pageNumber, setPageNumber] = useState<number>(1);

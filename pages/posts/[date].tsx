@@ -25,18 +25,21 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: any) {
     const blogEntry = await getMarkdownFileContent(`${params.date}.md`);
+    const fileTitle = blogEntry[0].split('\n')[0].replace("#", "").trim();
 
     return {
         props: {
+            title: fileTitle,
             blogEntry: (await Promise.all(blogEntry))[0],
         },
     };
 }
 
+BlogEntry.displayName = "Article";
 export default function BlogEntry({ blogEntry }: any) {
     return (
         <Wrapper>
-            <Grid direction="column">
+            <Grid direction="column" style={{ maxWidth: "800px" }}>
                 <Markdown>
                     { blogEntry }
                 </Markdown>

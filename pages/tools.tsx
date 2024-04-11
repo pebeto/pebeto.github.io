@@ -2,17 +2,22 @@ import {
     Grid,
     Link,
     Text,
-    Image,
-    Display,
 } from "@geist-ui/core";
 
 import Wrapper from "../components/wrapper";
 
-Tools.displayName = "Tools";
+export async function getStaticProps() {
+    return {
+        props: {
+            title: "Tools",
+        },
+    };
+}
+
 export default function Tools() {
     return (
         <Wrapper>
-            <Grid>
+            <Grid direction="column" style={{ maxWidth: "800px" }}>
                 <Text h3>Why are you showing me this?</Text>
                 <Text p>
                     I consider that a good workflow with the correct tools are essential
@@ -56,8 +61,6 @@ export default function Tools() {
                     planning to switch to another distro for a while. However, my laptop
                     uses Arch with Wayland and I'm really happy with it (still a fanboy).
                 </Text>
-            </Grid>
-            <Grid>
                 <Text h4>Terminal emulator</Text>
                 <Text p>
                     Choosing the right terminal emulator is essential for a good
@@ -153,34 +156,6 @@ export default function Tools() {
                     </Link>
                     .
                 </Text>
-            </Grid>
-            <Grid xs={25} md={25}>
-                <Display
-                    caption={
-                        <Text p>
-                            <Link
-                                href="https://wezfurlong.org/wezterm/"
-                                icon
-                                color
-                                target="_blank"
-                            >
-                                WezTerm
-                            </Link>{" "}
-                            window with{" "}
-                            <Link href="https://starship.rs/" target="_blank" color icon>
-                                Starship
-                            </Link>{" "}
-                            prompt
-                        </Text>
-                    }
-                >
-                    <Image
-                        alt="WezTerm window with Starship prompt"
-                        src="terminal.png"
-                    />
-                </Display>
-            </Grid>
-            <Grid>
                 <Text h4>Text editor & IDEs</Text>
                 <Text p>
                     I usually avoid using IDEs. They are great for beginners, but full

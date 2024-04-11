@@ -15,6 +15,7 @@ export async function getStaticProps() {
 
     return {
         props: {
+            title: "Blog",
             markdownFiles: await Promise.all(markdownFiles),
         },
     };
@@ -25,6 +26,12 @@ export default function Blog({ markdownFiles }: any) {
     return (
         <Wrapper>
             <Grid direction="column">
+                <Text>
+                    This is a very personal section of my website. My thoughts, experiences and ideas are shared here.
+                </Text>
+                <Text>
+                    Most of my writings will be in my native language, Spanish. However, I will try to write some articles in English.
+                </Text>
                 <ul>
                     {
                         Children.toArray(
