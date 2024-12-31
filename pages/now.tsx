@@ -6,7 +6,7 @@ import {
     Display,
 } from "@geist-ui/core";
 
-import getDaysSinceDate from "../utils";
+import { getDaysSinceDate } from "../utils";
 import Wrapper from "../components/wrapper";
 
 export async function getStaticProps() {

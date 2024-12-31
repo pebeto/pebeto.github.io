@@ -16,6 +16,7 @@ export async function getStaticPaths() {
             },
         };
     });
+    console.log(await Promise.all(paths));
 
     return {
         paths: await Promise.all(paths),
@@ -41,7 +42,7 @@ export default function BlogEntry({ blogEntry }: any) {
         <Wrapper>
             <Grid direction="column" style={{ maxWidth: "800px" }}>
                 <Markdown>
-                    { blogEntry }
+                    {blogEntry}
                 </Markdown>
             </Grid>
         </Wrapper>
