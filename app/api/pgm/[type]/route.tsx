@@ -3,6 +3,12 @@ import { NextRequest, NextResponse } from "next/server";
 import { PgmTypes } from "@/utils";
 import { getPgm } from "@/services/pgm";
 
+export async function generateStaticParams() {
+    return Object.values(PgmTypes).map((type) => {
+        return { type };
+    });
+}
+
 export async function GET(_: NextRequest,
     { params }: { params: Promise<{ type: string }> }
 ) {
