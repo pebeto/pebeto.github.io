@@ -1,14 +1,13 @@
-import {
-    Text,
-    Grid,
-} from "@geist-ui/core";
+import { Col, Container, Row } from "react-bootstrap";
 
 export default function Footer() {
     return (
-        <Grid.Container justify="center">
-            <Grid>
-                <Text p>Jose Esparza | {new Date().getFullYear()}</Text>
-            </Grid>
-        </Grid.Container>
+        <Container>
+            <Row>
+                <Col>
+                    <p>Jose Esparza | {new Date().getFullYear()}</p>
+                </Col>
+            </Row>
+        </Container>
     );
 }

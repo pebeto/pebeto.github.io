@@ -1,5 +1,6 @@
 import path from "path";
 import { promises as fs } from "fs";
+import { notFound } from "next/navigation";
 
 import { FileResource } from "../types/fileResource";
 
@@ -14,9 +15,13 @@ export async function getMarkdownFileNames(): Promise<string[]> {
 }
 
 export async function getMarkdownFileContent(fileName: string): Promise<string[]> {
-    const data = await fs.readFile(path.join(getMarkdownFilesDirectory(), fileName), "utf8");
+    try {
+        const data = await fs.readFile(path.join(getMarkdownFilesDirectory(), fileName), "utf8");
 
-    return await Promise.all([data]);
+        return await Promise.all([data]);
+    } catch (_) {
+        notFound();
+    }
 }
 
 export async function getMarkdownFiles(): Promise<FileResource[]> {
@@ -29,7 +34,7 @@ export async function getMarkdownFiles(): Promise<FileResource[]> {
 
         return {
             title: `${fileDate} - ${fileTitle}`,
-            link: `posts/${fileDate}`,
+            link: `blog/${fileDate}`,
         };
     });
 
