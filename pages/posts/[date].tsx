@@ -16,7 +16,6 @@ export async function getStaticPaths() {
             },
         };
     });
-    console.log(await Promise.all(paths));
 
     return {
         paths: await Promise.all(paths),
