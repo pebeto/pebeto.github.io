@@ -26,7 +26,7 @@ export default function Home() {
                         academics and industry makes me aware of novelty and fast driving,
                         as well as good analytical skills. I worked with teams from
                         different countries, giving me an integral communication fluency in
-                        English. Some of my work are related with really complex systems using
+                        English. Some of my work is related with really complex systems using
                         large data pipelines, as well as performing analysis and applying
                         machine learning models.
                     </p>

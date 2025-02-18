@@ -21,23 +21,21 @@ export default function Now() {
                     </h3>
                     <ul>
                         <li>
-                            Still recording my band's album (a truly masterpiece; if you are a
-                            record label, please hire us)
+                            Still recording my band's album (a truly masterpiece; if you
+                            are a record label, please hire us)
                         </li>
                         <li>
-                            Working on my living room (I will post pictures when it's done)
+                            Started playing Persona series (Finished Persona 3 Reload, and
+                            now playing Persona 4 Golden)
                         </li>
                         <li>
-                            Started swimming for two hours three times a week
+                            After four months, I'm a freestyle swimming beast
                         </li>
                         <li>
-                            Bought a Steam Deck and rediscovering my love for videogames
-                        </li>
-                        <li>
-                            Migrating this page to a SSR Next.js app (Maybe you are seeing it)
+                            Leaving my screen addiction and enjoying more the real world
                         </li>
                     </ul>
-                    <p>Last update: {getDaysSinceDate("2024-12-31")} days ago</p>
+                    <p>Last update: {getDaysSinceDate("2025-02-18")} days ago</p>
                 </Col>
                 <Col xs={8} sm={5}>
                     <Figure>

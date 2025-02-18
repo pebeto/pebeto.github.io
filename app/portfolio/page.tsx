@@ -51,6 +51,34 @@ export default async function Portfolio() {
                             )
                         }
                     </ul>
+                    <h3>Cool projects</h3>
+                    <ul>
+                        <li>
+                            <Link href="https://github.com/JuliaAI/MLJ.jl" target="_blank">
+                                <b>MLJ.jl</b>
+                            </Link> - A Julia machine learning framework.
+                        </li>
+                        <li>
+                            <Link href="https://github.com/JuliaAI/MLFlowClient.jl" target="_blank">
+                                <b>MLFlowClient.jl</b>
+                            </Link> - A Julia client for MLFlow.
+                        </li>
+                        <li>
+                            <Link href="https://github.com/pebeto/missyhud.prx" target="_blank">
+                                <b>missyhud.prx</b>
+                            </Link> - A PlayStation Portable plugin to display a simple HUD.
+                        </li>
+                        <li>
+                            <Link href="https://github.com/pebeto/proton-ge-manager" target="_blank">
+                                <b>proton-ge-manager</b>
+                            </Link> -  A painless proton-ge installation for Steam Deck/Linux.
+                        </li>
+                        <li>
+                            <Link href="https://github.com/pebeto/ARP.jl" target="_blank">
+                                <b>ARP.jl</b>
+                            </Link> - An implementation of the Auto-Rotating Perceptrons in Julia.
+                        </li>
+                    </ul>
                     <p>
                         Also you can find more interesting stuff in my {" "}
                         <Link href="https://github.com/pebeto" target="_blank">
