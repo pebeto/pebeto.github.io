@@ -1,7 +1,9 @@
+import remarkGfm from "remark-gfm";
 import Markdown from "react-markdown";
 import { Col, Container, Row } from "react-bootstrap";
 
 import { getMarkdownFileContent, getMarkdownFileNames } from "@/services/markdownFiles";
+import rehypeRaw from "rehype-raw";
 
 export async function generateStaticParams() {
     const fileNames = await getMarkdownFileNames();
@@ -10,6 +12,16 @@ export async function generateStaticParams() {
     });
 
     return paths;
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ date: string }> }) {
+    const date = (await params).date;
+    const blogEntryTitle = (await getMarkdownFileContent(`${date}.md`))[0].split('\n')[0].replace(/^#\s+/, '');
+
+    return {
+        title: `${date} | Jose's Blog`,
+        description: blogEntryTitle,
+    };
 }
 
 export default async function BlogEntry(
@@ -22,7 +34,7 @@ export default async function BlogEntry(
         <Container>
             <Row>
                 <Col>
-                    <Markdown>
+                    <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
                         {blogEntry}
                     </Markdown>
                 </Col>
