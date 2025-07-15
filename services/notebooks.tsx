@@ -9,7 +9,7 @@ export async function getNotebooks(): Promise<FileResource[]> {
 
     return filenames.map((filename: string) => {
         return {
-            title: filename.split(".")[0],
+            title: filename.slice(0, filename.lastIndexOf(".")),
             link: `notebooks/${filename}`,
         };
     });

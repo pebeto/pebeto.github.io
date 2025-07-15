@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Blog() {
-    const markdownFiles = await getMarkdownFiles();
+    const markdownFiles = (await getMarkdownFiles()).reverse();
 
     return (
         <Container>
