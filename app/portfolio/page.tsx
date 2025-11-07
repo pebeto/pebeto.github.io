@@ -59,6 +59,11 @@ export default async function Portfolio() {
                             </Link> - A Julia machine learning framework.
                         </li>
                         <li>
+                            <Link href="https://github.com/JuliaAI/DearDiary.jl" target="_blank">
+                                <b>DearDiary.jl</b>
+                            </Link> -  A machine learning experiment tracking tool for Julia.
+                        </li>
+                        <li>
                             <Link href="https://github.com/JuliaAI/MLFlowClient.jl" target="_blank">
                                 <b>MLFlowClient.jl</b>
                             </Link> - A Julia client for MLFlow.
