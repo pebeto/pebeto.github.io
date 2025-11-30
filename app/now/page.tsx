@@ -25,14 +25,14 @@ export default function Now() {
                             are a record label, please hire us)
                         </li>
                         <li>
-                            Started playing Persona series (Finished Persona 3 Reload, and
-                            now playing Persona 4 Golden)
+                            Fine-tuning LLMs as much as I can
                         </li>
                         <li>
-                            After four months, I'm a freestyle swimming beast
+                            Traveling to Chile to see{" "}
+                            <Link href="https://www.capnjazz.band/" target="_blank">Cap'n Jazz</Link> live
                         </li>
                         <li>
-                            Leaving my screen addiction and enjoying more the real world
+                            Living a pretty normal life with my girlfriend and our four cats
                         </li>
                     </ul>
                     <p>Last update: {getDaysSinceDate("2025-02-18")} days ago</p>
