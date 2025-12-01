@@ -28,14 +28,13 @@ export default function Now() {
                             Fine-tuning LLMs as much as I can
                         </li>
                         <li>
-                            Traveling to Chile to see{" "}
-                            <Link href="https://www.capnjazz.band/" target="_blank">Cap'n Jazz</Link> live
+                            Trying to assimilate that Tim Kinsella hug me
                         </li>
                         <li>
                             Living a pretty normal life with my girlfriend and our four cats
                         </li>
                     </ul>
-                    <p>Last update: {getDaysSinceDate("2025-02-18")} days ago</p>
+                    <p>Last update: {getDaysSinceDate("2025-12-01")} days ago</p>
                 </Col>
                 <Col xs={8} sm={5}>
                     <Figure>
