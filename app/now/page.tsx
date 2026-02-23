@@ -28,20 +28,34 @@ export default function Now() {
                             Fine-tuning LLMs as much as I can
                         </li>
                         <li>
-                            Trying to assimilate that Tim Kinsella hug me
+                            Living a pretty normal life with my girlfriend and our four
+                            cats
                         </li>
                         <li>
-                            Living a pretty normal life with my girlfriend and our four cats
+                            My girlfriend gifted me a Switch 2. In love with Zelda games!!!
+                        </li>
+                        <li>
+                            Learning about optimal GPU kernel implementations
+                        </li>
+                        <li>
+                            Journaling every day (Improved my mental health a lot, highly
+                            recommend it)
                         </li>
                     </ul>
-                    <p>Last update: {getDaysSinceDate("2025-12-01")} days ago</p>
+                    <p>Last update: {getDaysSinceDate("2026-02-23")} days ago</p>
                 </Col>
                 <Col xs={8} sm={5}>
                     <Figure>
-                        <FigureImage src="emvdmv.jpeg" alt="Playing with El Mejor Verano de mi Vida" />
+                        <FigureImage
+                            src="emvdmv.jpeg"
+                            alt="Playing with El Mejor Verano de mi Vida"
+                        />
                         <FigureCaption>
                             Playing with{" "}
-                            <Link href="https://pebeto.github.io/elmejorveranodemivida/" target="_blank">
+                            <Link
+                                href="https://pebeto.github.io/elmejorveranodemivida/"
+                                target="_blank"
+                            >
                                 El Mejor Verano de mi Vida
                             </Link>
                         </FigureCaption>
