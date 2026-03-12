@@ -1,17 +1,25 @@
-import Link from "next/link";
+'use client';
 
+import Link from "next/link";
 import { getRandomSubheader } from "@/services/subheaders";
+import { useState, useEffect } from "react";
 import { Col, Container, Row, Stack } from "react-bootstrap";
 
 import './header.css';
 
 export default function Header() {
+    const [subheader, setSubheader] = useState('');
+
+    useEffect(() => {
+        setSubheader(getRandomSubheader());
+    }, []);
+
     return (
         <Container className="header-container">
             <Row>
                 <Col>
                     <h1>Jose Esparza</h1>
-                    <h3>{getRandomSubheader()}</h3>
+                    <h3>{subheader}</h3>
                 </Col>
             </Row>
             <Stack direction="horizontal" gap={2}>
