@@ -18,35 +18,21 @@ export default async function Tools() {
                     with tools I found useful. I think that can be impactful for them,
                     so I decided to share them here.
                 </p>
-                <h3>Operative systems</h3>
-                <ul>
-                    <li>
-                        <b>Laptop operative system:</b>
-                        {" "}
-                        <Link href="https://www.freebsd.org/" target="_blank">
-                            FreeBSD
-                        </Link>
-                        <p>
-                            Installed in my Thinkpad T470. Choosing FreeBSD was more
-                            related to curiosity than necessity. I wanted to learn more
-                            about it, and I'm happy with the results. Even though it
-                            doesn't have the same support as Linux, it's a great
-                            experience.
-                        </p>
-                    </li>
-                    <li>
-                        <b>Desktop operative system:</b>
-                        {" "}
-                        <Link href="https://ubuntu.com/" target="_blank">
-                            Ubuntu
-                        </Link>
-                        <p>
-                            Installed in my desktop computer. Due to NVIDIA drivers
-                            support, I decided to use Ubuntu. It's not my favorite
-                            operative system due to its poor package management.
-                        </p>
-                    </li>
-                </ul>
+                <h3>
+                    Operative system:{" "}
+                    <Link href="https://archlinux.org/" target="_blank">
+                        Arch Linux
+                    </Link>
+                </h3>
+                <p>
+                    Installed in my Thinkpad T470 and desktop computer. I switched
+                    to Arch Linux because I can better manage the configurations
+                    and share them between machines. My window manager is {" "}
+                    <Link href="https://swaywm.org/" target="_blank">
+                        Sway
+                    </Link>{" "}
+                    , so now I'm in the fields of Wayland.
+                </p>
                 <h3>Development tools</h3>
                 <ul>
                     <li>
@@ -91,12 +77,90 @@ export default async function Tools() {
                     <li>
                         <b>Web browser:</b>
                         {" "}
-                        <Link href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">
-                            Firefox
+                        <Link href="https://helium.computer/" target="_blank">
+                            Helium
                         </Link>
                         <p>
-                            Not a fan of it, but there's no browser fitting my needs
-                            better than this one.
+                            Chosen for simplicity and no privacy concerns. I prefer
+                            avoiding Mozilla's trend of bloating the browser with AI
+                            features, like everyone else in software these days.
+                        </p>
+                    </li>
+                    <li>
+                        <b>Code assistant:</b>
+                        {" "}
+                        <Link href="https://opencode.ai/" target="_blank">
+                            OpenCode
+                        </Link>
+                        <p>
+                            Running {" "}
+                            <Link href="https://huggingface.co/Sehyo/Qwen3.5-35B-A3B-NVFP4" target="_blank">
+                                Sehyo/Qwen3.5-35B-A3B-NVFP4
+                            </Link>. Useful for code generation and code explanation. However, I don't
+                            rely on it entirely because I'm not a vibe-coder. I prefer
+                            to "operate" it and understand the solution before using it,
+                            avoiding the "copy-paste" mentality that can be harmful for
+                            learning and understanding the code.
+                        </p>
+                    </li>
+                </ul>
+                <h3>Personal tools</h3>
+                <ul>
+                    <li>
+                        <b>Daily notes:</b>
+                        {" "}
+                        <Link href="https://www.moleskine.com/en-us/" target="_blank">
+                            Moleskine notebook
+                        </Link>
+                        <p>
+                            Since I use it for daily notes, my mind is more focused and I
+                            can remember things better. The decision to stay away from
+                            digital tools for this purpose is because of the distraction
+                            they can cause.
+                        </p>
+                    </li>
+                    <li>
+                        <b>Agenda:</b>
+                        {" "}
+                        <Link href="https://orgmode.org/" target="_blank">
+                            Org Mode
+                        </Link>
+                        <p>
+                            Don't look me in the eyes, I know it's not physical as the
+                            notebooks, but it's extremely useful for managing events
+                            and tasks. I use it in Neovim thanks to {" "}
+                            <Link href="https://github.com/nvim-orgmode/orgmode" target="_blank">
+                                nvim-orgmode
+                            </Link>, and thanks to it a message is always sent to my
+                            family and friends on the day of their birthday.
+                        </p>
+                    </li>
+                    <li>
+                        <b>Note-taking:</b>
+                        {" "}
+                        <Link href="https://shop.travelerscompanyusa.com/products/travelers-notebook-passport-size-brown" target="_blank">
+                            Traveler's notebook Passport size
+                        </Link>
+                        <p>
+                            Using it as my wallet too. I write down ideas, to-do lists, and
+                            other things I want to remember or to transfer to another
+                            notebook later. Thanks to its size, I can carry it everywhere
+                            and never forget what I should do or what I want to do.
+
+                        </p>
+                    </li>
+                    <li>
+                        <b>Syncing files:</b>
+                        {" "}
+                        <Link href="https://syncthing.net/" target="_blank">
+                            Syncthing
+                        </Link>
+                        <p>
+                            My resume, books, papers, orgfiles, and other important files
+                            are synced between my devices. I don't want to rely on
+                            third-party services for this. Adding a VPN to the mix, I can
+                            access my files from anywhere without worrying about privacy or
+                            security.
                         </p>
                     </li>
                 </ul>
