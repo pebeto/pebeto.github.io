@@ -5,3 +5,8 @@
 .header-link {
     text-decoration: none;
 }
+
+.resume-link {
+    text-decoration: underline;
+    font-weight: bold;
+}

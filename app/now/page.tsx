@@ -1,13 +1,17 @@
+'use client';
+
 import Link from "next/link";
-import { Metadata } from "next";
 import { Col, Container, Figure, FigureCaption, FigureImage, Row } from "react-bootstrap";
 import { getDaysSinceDate } from "@/utils";
-
-export const metadata: Metadata = {
-    title: "Now | Jose's Website",
-};
+import { useState, useEffect } from "react";
 
 export default function Now() {
+    const [daysSince, setDaysSince] = useState<number>(0);
+
+    useEffect(() => {
+        setDaysSince(getDaysSinceDate("2026-04-04"));
+    }, []);
+
     return (
         <Container>
             <Row>
@@ -32,17 +36,13 @@ export default function Now() {
                             cats
                         </li>
                         <li>
-                            My girlfriend gifted me a Switch 2. In love with Zelda games!!!
+                            Experimenting with LLM quantization and distillation
                         </li>
                         <li>
-                            Learning about optimal GPU kernel implementations
-                        </li>
-                        <li>
-                            Journaling every day (Improved my mental health a lot, highly
-                            recommend it)
+                            Optimizing my workflow to be more productive and efficient
                         </li>
                     </ul>
-                    <p>Last update: {getDaysSinceDate("2026-02-23")} days ago</p>
+                    <p>Last update: {daysSince} days ago</p>
                 </Col>
                 <Col xs={8} sm={5}>
                     <Figure>

@@ -56,12 +56,12 @@ export default async function Tools() {
                     <li>
                         <b>Terminal emulator:</b>
                         {" "}
-                        <Link href="https://wezterm.org/" target="_blank">
-                            WezTerm
+                        <Link href="https://codeberg.org/dnkl/foot" target="_blank">
+                            foot
                         </Link>
                         <p>
-                            For me, one of the best software made in the last years.
-                            The only downside is that it's written in Rust (ugly).
+                            Finally replaced the Rust-based nice terminal with another nice
+                            terminal, but written in C.
                         </p>
                     </li>
                     <li>
@@ -94,8 +94,8 @@ export default async function Tools() {
                         </Link>
                         <p>
                             Running {" "}
-                            <Link href="https://huggingface.co/Sehyo/Qwen3.5-35B-A3B-NVFP4" target="_blank">
-                                Sehyo/Qwen3.5-35B-A3B-NVFP4
+                            <Link href="https://huggingface.co/apolo13x/Qwen3.5-27B-NVFP4" target="_blank">
+                                apolo13x/Qwen3.5-27B-NVFP4
                             </Link>. Useful for code generation and code explanation. However, I don't
                             rely on it entirely because I'm not a vibe-coder. I prefer
                             to "operate" it and understand the solution before using it,

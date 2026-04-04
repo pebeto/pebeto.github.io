@@ -21,85 +21,66 @@ export default function Home() {
                 <Col sm={7} md={7}>
                     <h3>Welcome!</h3>
                     <p>
-                        I'm a Software Engineer with extensive knowledge in Machine
-                        Learning, Data Science and Software Development. My experience in both
-                        academics and industry makes me aware of novelty and fast driving,
-                        as well as good analytical skills. I worked with teams from
-                        different countries, giving me an integral communication fluency in
-                        English. Some of my work is related with really complex systems using
-                        large data pipelines, as well as performing analysis and applying
-                        machine learning models.
+                        I'm a Senior Software & ML Engineer focused on bridging the gap between advanced academic research and scalable industry solutions. My experience spans architecting complex data pipelines, deploying fine-tuned LLMs, and building robust RAG architectures for real-world applications. As a bilingual (English/Spanish) tech lead, I enjoy aligning multinational teams to deliver high-performance, production-grade AI and full-stack systems.
                     </p>
                     <p>
-                        I studied at{" "}
+                        I hold a B.S. in Software Engineering from{" "}
                         <Link href="https://www.upn.edu.pe/" target="_blank">
                             Universidad Privada del Norte
                         </Link>{" "}
-                        and received as a Bachelor in Software Engineering. My bachelor
-                        research project was highlighted due to subject innovation in my
-                        alma mater, as well as presented in{" "}
+                        where I graduated as a highlighted student with a 4.0 GPA. My early research was recognized at the{" "}
                         <Link href="https://smiles.skoltech.ru/school-2020" target="_blank">
-                            SMILES 2020
-                        </Link>{" "}
-                        as a research poster.
-                        Now I'm running a MsC in Computer Science at{" "}
-                        <Link href="https://www.bbk.ac.uk/" target="_blank">
-                            Birkbeck, University of London
+                            Skolkovo Institute of Science and Technology (SMILES 2020)
                         </Link>
+                        , where I earned a top 10% spot to present my work on Convolutional Neural Networks for respiratory condition detection. Currently, I am expanding my academic horizons by pursuing an MSc in Computer Science at the{" "}
+                        <Link href="https://www.london.ac.uk/" target="_blank">
+                            University of London
+                        </Link>.
                     </p>
                     <p>
-                        As part of the first{" "}
+                        As a{" "}
                         <Link href="https://www.repuprogram.org/repu-cs" target="_blank">
-                            REPUcs
+                            REPU
                         </Link>{" "}
-                        cohort, I presented and published a{" "}
+                        Computer Science alum, I analyzed a corpus of 80,000 COVID-19-related texts using novel NLP approaches. This resulted in a published{" "}
                         <Link href="https://link.springer.com/chapter/10.1007/978-3-030-91434-9_18" target="_blank">
                             research paper
                         </Link>{" "}
-                        about COVID-19 vaccine roll social reaction and it was indexed in
-                        the{" "}
+                        that was indexed in the{" "}
                         <Link
                             href="https://pesquisa.bvsalud.org/global-literature-on-novel-coronavirus-2019-ncov/resource/pt/covidwho-1593151?lang=en" target="_blank">
                             WHO COVID-19 Research Database
-                        </Link>
-                        . I was mentored by{" "}
+                        </Link>. During this research, I had the privilege of being mentored by{" "}
                         <Link
                             href="https://www.linkedin.com/in/gissella-bejarano-phd-3789b01a/" target="_blank">
-                            Gissella Bejarano
-                        </Link>
-                        , being part of the Machine Learning Research Group from{" "}
+                            Gisella Bejarano
+                        </Link>{" "}
+                        in Professor Arti Ramesh's research lab at{" "}
                         <Link href="https://www.binghamton.edu/computer-science/index.html" target="_blank">
-                            Binghamton University Computer Science Department
-                        </Link>
-                        .
+                            Binghamton University
+                        </Link>.
                     </p>
                     <p>
-                        I'm a Julia Programming Language enthusiast, and most of my personal
-                        computer science projects are based on it. This is great language,
-                        and I'm convinced that it will be the future of scientific
-                        computing. The Google Summer of Code 2023 gave me the opportunity to
-                        be a{" "}
+                        I'm also a huge enthusiast of the Julia Programming Language and active in the open-source community. The Google Summer of Code 2023 gave me the opportunity to work on{" "}
+                        <Link href="https://summerofcode.withgoogle.com/archive/2023/projects/iRxuzeGJ" target="_blank">
+                            empowering Julia-based Data Science with MLflow
+                        </Link>.{" "}
+                        Today, I actively contribute to the{" "}
                         <Link href="https://alan-turing-institute.github.io/MLJ.jl/dev/" target="_blank">
                             Machine Learning in Julia (MLJ)
                         </Link>{" "}
-                        contributor, being mentored by{" "}
-                        <Link href="https://ablaom.github.io" target="_blank">
-                            Anthony Blaom, PhD
+                        framework, and I maintain tracking tools like{" "}
+                        <Link href="https://github.com/JuliaAI/DearDiary.jl" target="_blank">
+                            DearDiary.jl
                         </Link>{" "}
-                        and{" "}
-                        <Link href="https://www.linkedin.com/in/deyandyankov/" target="_blank">
-                            Deyan Dyankov
-                        </Link>
-                        .
+                        under the JuliaAI organization.
                     </p>
                     <p>
-                        I play vocals in a band called{" "}
+                        Beyond the code, I play vocals in a band called{" "}
                         <Link href="https://pebeto.github.io/elmejorveranodemivida/" target="_blank">
                             El mejor verano de mi vida
                         </Link>{" "}
-                        (The best summer of my life). We were recognized as part of the
-                        fifth wave of emo, so I'm proud of it. I also like to play Magic The
-                        Gathering and I have two cats.
+                        (The best summer of my life). We were recognized as part of the fifth wave of emo, which I'm quite proud of! I also enjoy playing Magic: The Gathering and spending time with my two cats.
                     </p>
                 </Col>
             </Row>

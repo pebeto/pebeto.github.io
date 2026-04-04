@@ -28,7 +28,7 @@ export default function Header() {
                 <Link className="header-link" href="/portfolio">Portfolio</Link>
                 <Link className="header-link" href="/tools">Tools</Link>
                 <Link className="header-link" href="/blog">Blog</Link>
-                <Link className="header-link" href="/resume">Resume</Link>
+                <a className="header-link resume-link" href="/resume.pdf" target="_blank">Resume ↗</a>
             </Stack>
         </Container>
     );
