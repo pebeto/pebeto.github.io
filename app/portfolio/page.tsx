@@ -12,6 +12,13 @@ export const metadata: Metadata = {
 
 export default async function Portfolio() {
     const notebooks = await getNotebooks();
+    const groupedNotebooks = notebooks.reduce((acc, notebook) => {
+        if (!acc[notebook.category]) {
+            acc[notebook.category] = [];
+        }
+        acc[notebook.category].push(notebook);
+        return acc;
+    }, {} as Record<string, FileResource[]>);
 
     return (
         <Container>
@@ -40,15 +47,26 @@ export default async function Portfolio() {
                     </p>
                     <ul>
                         {
-                            Children.toArray(
-                                notebooks.map((notebook: FileResource) => (
-                                    <li>
-                                        <Link href={notebook.link} target="_blank">
-                                            <b>{notebook.title}</b>
-                                        </Link>
-                                    </li>
-                                ))
-                            )
+                            Object.entries(groupedNotebooks).map(([category, categoryNotebooks]) => (
+                                <Row key={category} className="mb-3">
+                                    <Col>
+                                        <h5>{category}</h5>
+                                        <ul>
+                                            {
+                                                Children.toArray(
+                                                    categoryNotebooks.map((notebook: FileResource) => (
+                                                        <li>
+                                                            <Link href={notebook.link} target="_blank">
+                                                                <b>{notebook.title}</b>
+                                                            </Link>
+                                                        </li>
+                                                    ))
+                                                )
+                                            }
+                                        </ul>
+                                    </Col>
+                                </Row>
+                            ))
                         }
                     </ul>
                     <h3>Cool projects</h3>
