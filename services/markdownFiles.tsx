@@ -35,6 +35,7 @@ export async function getMarkdownFiles(): Promise<FileResource[]> {
         return {
             title: `${fileDate} - ${fileTitle}`,
             link: `blog/${fileDate}`,
+            category: "none",
         };
     });
 
