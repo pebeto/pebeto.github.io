@@ -49,6 +49,7 @@ export default function Now() {
                         <FigureImage
                             src="emvdmv.jpeg"
                             alt="Playing with El Mejor Verano de mi Vida"
+                            rounded
                         />
                         <FigureCaption>
                             Playing with{" "}

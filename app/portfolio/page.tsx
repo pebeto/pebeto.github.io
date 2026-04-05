@@ -23,11 +23,11 @@ export default async function Portfolio() {
     return (
         <Container>
             <Row>
-                <Col xs={10} sm={5}>
+                <Col xs={8} sm={4}>
                     <Figure>
-                        <FigureImage src="nn.png" alt="A cool neural network" />
+                        <FigureImage src="missy.jpeg" alt="Missy" rounded />
                         <FigureCaption>
-                            A cool neural network
+                            Missy
                         </FigureCaption>
                     </Figure>
                 </Col>
