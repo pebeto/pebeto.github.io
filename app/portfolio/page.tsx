@@ -32,6 +32,55 @@ export default async function Portfolio() {
                     </Figure>
                 </Col>
                 <Col xs={12} sm={7}>
+                    <h3>Cool projects</h3>
+                    <ul>
+                        <li>
+                            <Link href="https://github.com/JuliaAI/MLJ.jl" target="_blank">
+                                <b>MLJ.jl</b>
+                            </Link> - A Julia machine learning framework.
+                        </li>
+                        <li>
+                            <Link href="https://github.com/JuliaAI/DearDiary.jl" target="_blank">
+                                <b>DearDiary.jl</b>
+                            </Link> -  A machine learning experiment tracking tool for Julia.
+                        </li>
+                        <li>
+                            <Link href="https://github.com/pebeto/MichiBoost.jl" target="_blank">
+                                <b>MichiBoost.jl</b>
+                            </Link> - CatBoost implementation in Julia!
+                        </li>
+                        <li>
+                            <Link href="https://github.com/JuliaAI/MLFlowClient.jl" target="_blank">
+                                <b>MLFlowClient.jl</b>
+                            </Link> - A Julia client for MLFlow.
+                        </li>
+                        <li>
+                            <Link href="https://github.com/pebeto/ARP.jl" target="_blank">
+                                <b>ARP.jl</b>
+                            </Link> - An implementation of the Auto-Rotating Perceptrons in Julia.
+                        </li>
+                        <li>
+                            <Link href="https://github.com/pebeto/pluto-design-system" target="_blank">
+                                <b>pluto-design-system</b>
+                            </Link> - CSS framework styled in the Pluto.jl notebook aesthetic.
+                        </li>
+                        <li>
+                            <Link href="https://github.com/pebeto/missyhud.prx" target="_blank">
+                                <b>missyhud.prx</b>
+                            </Link> - A PSP plugin to display a simple HUD, written in C.
+                        </li>
+                        <li>
+                            <Link href="https://github.com/pebeto/proton-ge-manager" target="_blank">
+                                <b>proton-ge-manager</b>
+                            </Link> -  A painless proton-ge installation for Steam Deck/Linux.
+                        </li>
+                    </ul>
+                    <p>
+                        Also you can find more interesting stuff in my {" "}
+                        <Link href="https://github.com/pebeto" target="_blank">
+                            Github Profile
+                        </Link>.
+                    </p>
                     <h3>Notebooks</h3>
                     <p>
                         I'm an enthusiast of{" "}
@@ -69,45 +118,6 @@ export default async function Portfolio() {
                             ))
                         }
                     </ul>
-                    <h3>Cool projects</h3>
-                    <ul>
-                        <li>
-                            <Link href="https://github.com/JuliaAI/MLJ.jl" target="_blank">
-                                <b>MLJ.jl</b>
-                            </Link> - A Julia machine learning framework.
-                        </li>
-                        <li>
-                            <Link href="https://github.com/JuliaAI/DearDiary.jl" target="_blank">
-                                <b>DearDiary.jl</b>
-                            </Link> -  A machine learning experiment tracking tool for Julia.
-                        </li>
-                        <li>
-                            <Link href="https://github.com/JuliaAI/MLFlowClient.jl" target="_blank">
-                                <b>MLFlowClient.jl</b>
-                            </Link> - A Julia client for MLFlow.
-                        </li>
-                        <li>
-                            <Link href="https://github.com/pebeto/missyhud.prx" target="_blank">
-                                <b>missyhud.prx</b>
-                            </Link> - A PlayStation Portable plugin to display a simple HUD.
-                        </li>
-                        <li>
-                            <Link href="https://github.com/pebeto/proton-ge-manager" target="_blank">
-                                <b>proton-ge-manager</b>
-                            </Link> -  A painless proton-ge installation for Steam Deck/Linux.
-                        </li>
-                        <li>
-                            <Link href="https://github.com/pebeto/ARP.jl" target="_blank">
-                                <b>ARP.jl</b>
-                            </Link> - An implementation of the Auto-Rotating Perceptrons in Julia.
-                        </li>
-                    </ul>
-                    <p>
-                        Also you can find more interesting stuff in my {" "}
-                        <Link href="https://github.com/pebeto" target="_blank">
-                            Github Profile
-                        </Link>.
-                    </p>
                 </Col>
             </Row>
         </Container>
