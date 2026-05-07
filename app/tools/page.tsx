@@ -94,8 +94,8 @@ export default async function Tools() {
                         </Link>
                         <p>
                             Running {" "}
-                            <Link href="https://huggingface.co/apolo13x/Qwen3.5-27B-NVFP4" target="_blank">
-                                apolo13x/Qwen3.5-27B-NVFP4
+                            <Link href="https://huggingface.co/RedHatAI/Qwen3.6-35B-A3B-NVFP4" target="_blank">
+                                RedHatAI/Qwen3.6-35B-A3B-NVFP4
                             </Link>. Useful for code generation and code explanation. However, I don't
                             rely on it entirely because I'm not a vibe-coder. I prefer
                             to "operate" it and understand the solution before using it,

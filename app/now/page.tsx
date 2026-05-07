@@ -29,17 +29,13 @@ export default function Now() {
                             are a record label, please hire us)
                         </li>
                         <li>
-                            Fine-tuning LLMs as much as I can
+                            Learning about GPU programming
                         </li>
                         <li>
-                            Living a pretty normal life with my girlfriend and our four
-                            cats
+                            Learning about using profiling tools to optimize my code and find bottlenecks
                         </li>
                         <li>
-                            Experimenting with LLM quantization and distillation
-                        </li>
-                        <li>
-                            Optimizing my workflow to be more productive and efficient
+                            Playing Death Stranding 2 (awesome game, I highly recommend it)
                         </li>
                     </ul>
                     <p>Last update: {daysSince} days ago</p>
