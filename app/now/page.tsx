@@ -1,16 +1,12 @@
-'use client';
-
 import Link from "next/link";
-import { getDaysSinceDate } from "@/utils";
-import { useState, useEffect } from "react";
+import { Metadata } from "next";
+import DaysSince from "./days-since";
+
+export const metadata: Metadata = {
+    title: "Now | Jose's Website",
+};
 
 export default function Now() {
-    const [daysSince, setDaysSince] = useState<number>(0);
-
-    useEffect(() => {
-        setDaysSince(getDaysSinceDate("2026-05-18"));
-    }, []);
-
     return (
         <main className="max-w-6xl mx-auto px-12 py-16">
             <div className="flex flex-col lg:flex-row lg:gap-20">
@@ -38,9 +34,7 @@ export default function Now() {
                         ))}
                     </ul>
 
-                    <p className="text-sm text-[var(--color-text-faint)]">
-                        Last update: {daysSince} days ago
-                    </p>
+                    <DaysSince />
                 </div>
 
                 <div className="lg:w-1/3 lg:shrink-0 mt-12 lg:mt-0">
