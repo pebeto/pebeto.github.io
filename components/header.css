@@ -1,12 +1,1 @@
-.header-container {
-    padding-bottom: 1rem;
-}
-
-.header-link {
-    text-decoration: none;
-}
-
-.resume-link {
-    text-decoration: underline;
-    font-weight: bold;
-}
+/* No custom CSS needed — all styles are Tailwind utilities */

@@ -1,5 +1,5 @@
 import { Viewport } from "next"
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './globals.css'
 
 import Header from "@/components/header"
 import Footer from "@/components/footer"
@@ -9,7 +9,7 @@ export const viewport: Viewport = {
     initialScale: 1,
 };
 
-export default function RootLayout({ children, }: {
+export default function RootLayout({ children }: {
     children: React.ReactNode
 }) {
     return (
@@ -23,6 +23,19 @@ export default function RootLayout({ children, }: {
                 <meta
                     name="google-site-verification"
                     content="Z8eB-LcCtKoVuPT1qEVRbQzeV5rpJ7Tt_OHjkkJJrKM"
+                />
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            (function() {
+                                var stored = localStorage.getItem('theme');
+                                var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                                if (stored === 'dark' || (!stored && prefersDark)) {
+                                    document.documentElement.setAttribute('data-theme', 'dark');
+                                }
+                            })();
+                        `,
+                    }}
                 />
             </head>
             <body>
