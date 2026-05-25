@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Tools | Jose's Website",
+    title: "Tools",
 };
 
 export default async function Tools() {
@@ -10,7 +10,7 @@ export default async function Tools() {
         { title: "Shell", value: "zsh", desc: "Switched from bash for better plugin support.", href: null },
         { title: "Text editor", value: "Neovim", desc: "My swiss army knife. Using it since my first year of college.", href: "https://neovim.io/" },
         { title: "Terminal", value: "foot", desc: "A nice terminal written in C.", href: "https://codeberg.org/dnkl/foot" },
-        { title: "Database", value: "DataGrip", desc: "JetBrains free license for students.", href: "https://www.jetbrains.com/datagrip/" },
+        { title: "Database", value: "DataGrip", desc: "Free educational license through my MSc program.", href: "https://www.jetbrains.com/datagrip/" },
         { title: "Browser", value: "Helium", desc: "Simplicity, no privacy concerns. Avoiding bloat.", href: "https://helium.computer/" },
         { title: "Code assistant", value: "OpenCode", desc: 'Running sakamakismile/Qwen3.6-27B-Text-NVFP4-MTP. I prefer to "operate" it and understand the solution before using it.', href: "https://opencode.ai/" },
     ];
@@ -23,17 +23,15 @@ export default async function Tools() {
     ];
 
     return (
-        <main className="max-w-6xl mx-auto px-12 py-16 space-y-16">
+        <main className="max-w-6xl mx-auto px-6 sm:px-12 py-16 space-y-16">
             <section>
                 <h2 className="text-2xl font-semibold text-[var(--color-heading)] mb-5">
                     Why this page?
                 </h2>
-                <p className="text-[var(--color-text)] leading-relaxed max-w-2xl">
-                    I consider that a good workflow with the correct tools are essential
-                    to be productive. Who doesn't want to be comfortable and efficient?
-                    When I was in college, I was always looking to help my classmates
-                    with tools I found useful. I think that can be impactful for them,
-                    so I decided to share them here.
+                <p className="text-[var(--color-text)] leading-relaxed">
+                    Good tools shape good work. In college I kept handing tool
+                    recommendations to classmates. This page is the grown-up
+                    version of that habit.
                 </p>
             </section>
 

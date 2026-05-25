@@ -1,8 +1,16 @@
+import EmailLink from "./email-link";
+
 export default function Footer() {
     return (
         <footer className="border-t border-[var(--color-border)] mt-24">
-            <div className="max-w-6xl mx-auto px-12 py-10 text-sm text-[var(--color-text-faint)]">
-                Jose Esparza · {new Date().getFullYear()}
+            <div className="max-w-6xl mx-auto px-6 sm:px-12 py-10 text-sm text-[var(--color-text-faint)] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-y-3 gap-x-6">
+                <span>Jose Esparza · {new Date().getFullYear()}</span>
+                <span className="flex flex-wrap gap-x-5 gap-y-2">
+                    <EmailLink />
+                    <a href="https://github.com/pebeto" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/josesparza" target="_blank">LinkedIn</a>
+                    <a href="https://orcid.org/0000-0002-9372-3763" target="_blank">ORCID</a>
+                </span>
             </div>
         </footer>
     );

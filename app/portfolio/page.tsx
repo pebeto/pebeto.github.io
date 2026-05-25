@@ -5,7 +5,7 @@ import { getNotebooks } from "@/services/notebooks";
 import { FileResource } from "@/types/fileResource";
 
 export const metadata: Metadata = {
-    title: "Portfolio | Jose's Website",
+    title: "Portfolio",
 };
 
 export default async function Portfolio() {
@@ -19,20 +19,29 @@ export default async function Portfolio() {
     }, {} as Record<string, FileResource[]>);
 
     return (
-        <main className="max-w-6xl mx-auto px-12 py-16">
-            <div className="flex flex-col lg:flex-row lg:gap-20">
-                <div className="lg:w-1/3 lg:shrink-0">
-                    <div className="lg:sticky lg:top-12">
-                        <img src="missy.jpeg" alt="Missy" className="w-full rounded-sm" />
+        <main className="max-w-6xl mx-auto px-6 sm:px-12 py-16">
+            <div className="flex flex-col md:flex-row md:gap-12 lg:gap-20">
+                <div className="md:w-1/3 md:shrink-0">
+                    <div className="md:sticky md:top-12">
+                        <img src="missy.jpeg" alt="Missy" className="w-full max-w-xs md:max-w-none mx-auto md:mx-0 rounded-sm" />
                         <p className="text-xs text-[var(--color-text-faint)] mt-4 italic">
                             Missy
                         </p>
                     </div>
                 </div>
 
-                <div className="lg:w-2/3 lg:pl-10 lg:border-l lg:border-[var(--color-border-light)] space-y-10 mt-12 lg:mt-0">
+                <div className="md:w-2/3 md:pl-10 md:border-l md:border-[var(--color-border-light)] space-y-10 mt-12 md:mt-0">
                     <h2 className="text-2xl font-semibold text-[var(--color-heading)]">
-                        Projects
+                        Production work
+                    </h2>
+                    <p className="text-[var(--color-text)]">
+                        Most of what I ship at work is closed-source: production LLM agents, RAG pipelines, fine-tuned models and data infrastructure across fintech, edtech and retail. My{" "}
+                        <a href="/resume.pdf" target="_blank">resume</a>{" "}
+                        has names, dates and outcomes.
+                    </p>
+
+                    <h2 className="text-2xl font-semibold text-[var(--color-heading)] pt-6">
+                        Open-source projects
                     </h2>
 
                     <div className="space-y-5">
@@ -71,16 +80,15 @@ export default async function Portfolio() {
                         Notebooks
                     </h2>
                     <p className="text-[var(--color-text)]">
-                        I'm an enthusiast of{" "}
+                        I rebuilt some classic Python notebooks in{" "}
                         <Link href="https://julialang.org/" target="_blank">
                             Julia
-                        </Link>
-                        , so I translated every Python project from my old
-                        portfolio into Julia using{" "}
+                        </Link>{" "}
+                        using{" "}
                         <Link href="https://plutojl.org/" target="_blank">
                             Pluto.jl
                         </Link>{" "}
-                        for reactive notebooks.
+                        for the reactive UX. Pick a topic.
                     </p>
 
                     <div className="space-y-8">
@@ -105,6 +113,31 @@ export default async function Portfolio() {
                                 </div>
                             </div>
                         ))}
+                    </div>
+
+                    <h2 className="text-2xl font-semibold text-[var(--color-heading)] pt-6">
+                        Service
+                    </h2>
+
+                    <div className="space-y-5">
+                        <div>
+                            <span className="font-semibold text-[var(--color-heading)]">
+                                REPU Seminar 2026 Judge
+                            </span>
+                            <span className="text-[var(--color-text-faint)] mx-2">—</span>
+                            <span className="text-sm text-[var(--color-text-muted)]">
+                                Evaluated undergraduate research presentations for the Research Experience for Peruvian Undergraduates. April 2026.
+                            </span>
+                        </div>
+                        <div>
+                            <span className="font-semibold text-[var(--color-heading)]">
+                                IEEE Intercon 2024 Reviewer
+                            </span>
+                            <span className="text-[var(--color-text-faint)] mx-2">—</span>
+                            <span className="text-sm text-[var(--color-text-muted)]">
+                                Reviewed conference paper submissions for technical accuracy and originality. July 2024.
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>

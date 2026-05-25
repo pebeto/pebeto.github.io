@@ -1,12 +1,34 @@
-import { Viewport } from "next"
+import { Metadata, Viewport } from "next"
+import { IBM_Plex_Sans } from "next/font/google"
 import './globals.css'
 
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 
+const ibmPlexSans = IBM_Plex_Sans({
+    subsets: ['latin'],
+    weight: ['300', '400', '500', '600', '700'],
+    style: ['normal', 'italic'],
+    display: 'swap',
+});
+
 export const viewport: Viewport = {
     width: "device-width",
     initialScale: 1,
+};
+
+export const metadata: Metadata = {
+    title: {
+        default: "Jose Esparza | Senior ML Engineer",
+        template: "%s · Jose Esparza",
+    },
+    description: "Senior ML Engineer shipping production LLM systems with LangGraph, RAG and fine-tuned Llama models. Open-source Julia maintainer.",
+    openGraph: {
+        title: "Jose Esparza | Senior ML Engineer",
+        description: "Senior ML Engineer shipping production LLM systems with LangGraph, RAG and fine-tuned Llama models. Open-source Julia maintainer.",
+        type: "website",
+        images: ["/profile.jpeg"],
+    },
 };
 
 export default function RootLayout({ children }: {
@@ -15,14 +37,44 @@ export default function RootLayout({ children }: {
     return (
         <html lang="en">
             <head>
-                <meta property="og:title" content="Jose's Webpage" />
-                <meta
-                    property="og:description"
-                    content="Data Science, machine Learning, Python & Julia"
-                />
                 <meta
                     name="google-site-verification"
                     content="Z8eB-LcCtKoVuPT1qEVRbQzeV5rpJ7Tt_OHjkkJJrKM"
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "Person",
+                            "name": "Jose Esparza",
+                            "url": "https://www.joseesparza.me",
+                            "image": "https://www.joseesparza.me/profile.jpeg",
+                            "jobTitle": "Senior Machine Learning Engineer",
+                            "description": "Senior ML Engineer shipping production LLM systems with LangGraph, RAG and fine-tuned Llama models. Open-source Julia maintainer.",
+                            "sameAs": [
+                                "https://github.com/pebeto",
+                                "https://linkedin.com/in/josesparza",
+                                "https://orcid.org/0000-0002-9372-3763",
+                            ],
+                            "alumniOf": [
+                                {
+                                    "@type": "CollegeOrUniversity",
+                                    "name": "Universidad Privada del Norte",
+                                },
+                                {
+                                    "@type": "CollegeOrUniversity",
+                                    "name": "University of London",
+                                },
+                            ],
+                            "address": {
+                                "@type": "PostalAddress",
+                                "addressLocality": "Trujillo",
+                                "addressRegion": "La Libertad",
+                                "addressCountry": "PE",
+                            },
+                        }),
+                    }}
                 />
                 <script
                     dangerouslySetInnerHTML={{
@@ -38,7 +90,7 @@ export default function RootLayout({ children }: {
                     }}
                 />
             </head>
-            <body>
+            <body className={ibmPlexSans.className}>
                 <Header />
                 {children}
                 <Footer />

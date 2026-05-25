@@ -21,17 +21,16 @@ export default function Header() {
 
     return (
         <header className="border-b border-[var(--color-border)]">
-            <div className="max-w-6xl mx-auto px-12 py-8">
+            <div className="max-w-6xl mx-auto px-6 sm:px-12 py-8">
                 <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2">
                     <div>
                         <h1 className="text-xl font-semibold tracking-tight text-[var(--color-heading)]">
                             Jose Esparza
                         </h1>
-                        {subheader && (
-                            <p className="text-xs text-[var(--color-text-faint)] tracking-wide uppercase mt-1">
-                                {subheader}
-                            </p>
-                        )}
+                        <p className="text-xs text-[var(--color-text-faint)] tracking-wide uppercase mt-1">
+                            Trujillo, Peru · UTC-5
+                            {subheader && <> · {subheader}</>}
+                        </p>
                     </div>
 
                     <nav className="flex flex-wrap items-center gap-0">
