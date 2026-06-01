@@ -6,6 +6,8 @@ import { FileResource } from "@/types/fileResource";
 
 export const metadata: Metadata = {
     title: "Portfolio",
+    description: "Production ML work, open-source Julia projects, a peer-reviewed publication, and notebooks by Jose Esparza, Senior ML Engineer.",
+    alternates: { canonical: "/portfolio" },
 };
 
 export default async function Portfolio() {
@@ -37,8 +39,26 @@ export default async function Portfolio() {
                     <p className="text-[var(--color-text)]">
                         Most of what I ship at work is closed-source: production LLM agents, RAG pipelines, fine-tuned models and data infrastructure across fintech, edtech and retail. My{" "}
                         <a href="/resume.pdf" target="_blank">resume</a>{" "}
-                        has names, dates and outcomes.
+                        has the names and dates; below are a few representative builds.
                     </p>
+
+                    <div className="space-y-5">
+                        <div>
+                            <span className="font-semibold text-[var(--color-heading)]">Agentic banking assistant</span>
+                            <span className="text-[var(--color-text-faint)] mx-2">—</span>
+                            <span className="text-sm text-[var(--color-text-muted)]">WhatsApp customer support built end to end: a LangGraph agent over RAG (Postgres/pgvector), with audio transcription, AWS OTP, scheduled LLM-generated financial reports, and an MCP server exposing internal tools.</span>
+                        </div>
+                        <div>
+                            <span className="font-semibold text-[var(--color-heading)]">Curriculum ML tooling</span>
+                            <span className="text-[var(--color-text-faint)] mx-2">—</span>
+                            <span className="text-sm text-[var(--color-text-muted)]">A transformer recommender surfacing semantically adjacent lessons with sub-second latency, plus a fine-tuned Llama 3.1 8B (LoRA) for resource generation that expert reviewers signed off as on-voice.</span>
+                        </div>
+                        <div>
+                            <span className="font-semibold text-[var(--color-heading)]">Retail data pipelines</span>
+                            <span className="text-[var(--color-text-faint)] mx-2">—</span>
+                            <span className="text-sm text-[var(--color-text-muted)]">High-volume AWS ETL (Glue, Athena, Lambda, S3) ingesting product-availability data from major retailer B2B platforms, feeding analytics that drove stakeholder decisions.</span>
+                        </div>
+                    </div>
 
                     <h2 className="text-2xl font-semibold text-[var(--color-heading)] pt-6">
                         Open-source projects
@@ -72,9 +92,61 @@ export default async function Portfolio() {
                     <p className="text-[var(--color-text)]">
                         More in my{" "}
                         <Link href="https://github.com/pebeto" target="_blank">
-                            Github Profile
+                            GitHub Profile
                         </Link>.
                     </p>
+
+                    <h2 className="text-2xl font-semibold text-[var(--color-heading)] pt-6">
+                        Research & recognition
+                    </h2>
+
+                    <div className="space-y-5">
+                        <div>
+                            <Link
+                                href="https://link.springer.com/chapter/10.1007/978-3-030-91434-9_18"
+                                target="_blank"
+                                className="font-semibold text-[var(--color-heading)]"
+                            >
+                                Understanding the Issues Surrounding COVID-19 Vaccine Roll Out via User Tweets
+                            </Link>
+                            <span className="text-[var(--color-text-faint)] mx-2">—</span>
+                            <span className="text-sm text-[var(--color-text-muted)]">
+                                Peer-reviewed paper at CSoNet 2021, indexed in the{" "}
+                                <Link
+                                    href="https://pesquisa.bvsalud.org/global-literature-on-novel-coronavirus-2019-ncov/resource/pt/covidwho-1593151?lang=en"
+                                    target="_blank"
+                                >
+                                    WHO COVID-19 Research Database
+                                </Link>.
+                            </span>
+                        </div>
+                        <div>
+                            <Link
+                                href="https://summerofcode.withgoogle.com/archive/2023/projects/iRxuzeGJ"
+                                target="_blank"
+                                className="font-semibold text-[var(--color-heading)]"
+                            >
+                                Empowering Julia-based Data Science with MLflow
+                            </Link>
+                            <span className="text-[var(--color-text-faint)] mx-2">—</span>
+                            <span className="text-sm text-[var(--color-text-muted)]">
+                                Google Summer of Code 2023, bringing MLflow experiment tracking to the Julia ecosystem.
+                            </span>
+                        </div>
+                        <div>
+                            <Link
+                                href="https://smiles.skoltech.ru/school-2020"
+                                target="_blank"
+                                className="font-semibold text-[var(--color-heading)]"
+                            >
+                                Convolutional Neural Networks in Respiratory Conditions Detection: A Systematic Review of the Last 4 Years
+                            </Link>
+                            <span className="text-[var(--color-text-faint)] mx-2">—</span>
+                            <span className="text-sm text-[var(--color-text-muted)]">
+                                Research poster at SMILES 2020 (Skoltech), selected in the top 10% of 2,000+ applicants.
+                            </span>
+                        </div>
+                    </div>
 
                     <h2 className="text-2xl font-semibold text-[var(--color-heading)] pt-6">
                         Notebooks

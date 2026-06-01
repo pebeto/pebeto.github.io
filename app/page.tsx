@@ -24,7 +24,31 @@ export default function Home() {
 
                     <div className="space-y-6 text-[var(--color-text)] leading-relaxed">
                         <p>
-                            I'm a Senior ML Engineer who ships production LLM systems: agentic assistants with LangGraph and MCP, RAG over vector databases, fine-tuned Llama models for domain-specific generation, plus the BI dashboards and observability. The work spans fintech, edtech, retail and large enterprise. Recent builds: WhatsApp customer-support agents, semantic search over a lesson catalog, a Llama-based lesson generator fine-tuned on expert-picked curriculum to preserve a specific technical-English voice, and high-volume retailer data ingestion. Earlier in my career I trained classical risk models, built AWS ETL pipelines and shipped full-stack platforms. My{" "}
+                            I like owning a system from the first prototype to the dashboards that watch it in production. As a Senior ML Engineer, most of what I ship now is LLM systems: agentic assistants with LangGraph and MCP, RAG over vector databases, and fine-tuned Llama models for domain-specific generation, plus the BI and observability around them. I've worked across fintech, edtech, retail and large enterprise.
+                        </p>
+                        <div>
+                            <p>Recent builds:</p>
+                            <ul className="space-y-2 mt-3">
+                                <li className="flex items-start gap-3">
+                                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--color-dot)] shrink-0" />
+                                    <span>WhatsApp customer-support agents</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--color-dot)] shrink-0" />
+                                    <span>Semantic search over a lesson catalog</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--color-dot)] shrink-0" />
+                                    <span>A Llama-based lesson generator fine-tuned on expert-picked curriculum to preserve a specific technical-English voice</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--color-dot)] shrink-0" />
+                                    <span>High-volume retailer data ingestion</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p>
+                            Earlier in my career I led a five-engineer data team building AWS pipelines that ingested product-availability data from Cencosud, Falabella and Walmart, and trained default-risk models for fintech lenders. Before that I engineered raw-material microservices for INDITEX, refactored the Spanish Ministry of Justice's certificate system to handle 500k+ records, and shipped a full-stack risk platform for Barrick Gold. My{" "}
                             <a href="/resume.pdf" target="_blank">resume</a>{" "}
                             has the specifics.
                         </p>
@@ -51,25 +75,13 @@ export default function Home() {
                             <Link href="https://smiles.skoltech.ru/school-2020" target="_blank">
                                 SMILES 2020
                             </Link>{" "}
-                            summer school I earned a top 10% spot to present work on Convolutional Neural Networks for respiratory-condition detection. I'm pursuing an MSc in Computer Science at the{" "}
+                            summer school I placed in the top 10% of 2,000+ applicants and presented my work on Convolutional Neural Networks for respiratory-condition detection. I'm pursuing an MSc in Computer Science at the{" "}
                             <Link href="https://www.london.ac.uk/" target="_blank">
                                 University of London
                             </Link>.
                         </p>
                         <p>
-                            As a{" "}
-                            <Link href="https://www.repuprogram.org/repu-cs" target="_blank">
-                                REPU
-                            </Link>{" "}
-                            Computer Science alum, I analyzed a corpus of 80,000 COVID-19-related texts under the mentorship of{" "}
-                            <Link
-                                href="https://www.linkedin.com/in/gissella-bejarano-phd-3789b01a/" target="_blank">
-                                Gisella Bejarano
-                            </Link>{" "}
-                            in Professor Arti Ramesh's research lab at{" "}
-                            <Link href="https://www.binghamton.edu/computer-science/index.html" target="_blank">
-                                Binghamton University
-                            </Link>. We published the work as a{" "}
+                            As a REPU Computer Science alum, I analyzed 80,000 COVID-19 texts with Gisella Bejarano in Arti Ramesh's lab at Binghamton University, and we published a{" "}
                             <Link href="https://link.springer.com/chapter/10.1007/978-3-030-91434-9_18" target="_blank">
                                 paper
                             </Link>{" "}
@@ -80,11 +92,11 @@ export default function Home() {
                             </Link>.
                         </p>
                         <p>
-                            Beyond the code, I play vocals in a band called{" "}
+                            Beyond the code, I do vocals in a band called{" "}
                             <Link href="https://pebeto.github.io/elmejorveranodemivida/" target="_blank">
                                 El mejor verano de mi vida
                             </Link>{" "}
-                            (The best summer of my life). We were recognized as part of the fifth wave of emo, which I'm quite proud of! I also enjoy playing Magic: The Gathering and spending time with my two cats.
+                            (The best summer of my life). We got counted in the fifth wave of emo, and I'm proud of it. I also play Magic: The Gathering and spend time with my two cats.
                         </p>
                     </div>
 
@@ -92,36 +104,25 @@ export default function Home() {
                         Tech stack
                     </h2>
 
-                    <dl className="space-y-3 text-sm">
-                        <div className="flex flex-col sm:flex-row sm:gap-4">
-                            <dt className="font-semibold text-[var(--color-heading)] sm:w-36 shrink-0">LLM & ML</dt>
-                            <dd className="text-[var(--color-text-muted)]">PyTorch, TensorFlow, HF Transformers, vLLM, LangChain, LangGraph, LlamaIndex, MCP/FastMCP, LLaMA-Factory, OpenAI API, scikit-learn, pandas</dd>
-                        </div>
-                        <div className="flex flex-col sm:flex-row sm:gap-4">
-                            <dt className="font-semibold text-[var(--color-heading)] sm:w-36 shrink-0">Data & Cloud</dt>
-                            <dd className="text-[var(--color-text-muted)]">Spark, Airflow, Databricks, AWS, GCP</dd>
-                        </div>
-                        <div className="flex flex-col sm:flex-row sm:gap-4">
-                            <dt className="font-semibold text-[var(--color-heading)] sm:w-36 shrink-0">Databases</dt>
-                            <dd className="text-[var(--color-text-muted)]">PostgreSQL/pgvector, MongoDB, Redis, Neo4j</dd>
-                        </div>
-                        <div className="flex flex-col sm:flex-row sm:gap-4">
-                            <dt className="font-semibold text-[var(--color-heading)] sm:w-36 shrink-0">Backend & Web</dt>
-                            <dd className="text-[var(--color-text-muted)]">FastAPI, Django, Node.js, Next.js, TypeScript</dd>
-                        </div>
-                        <div className="flex flex-col sm:flex-row sm:gap-4">
-                            <dt className="font-semibold text-[var(--color-heading)] sm:w-36 shrink-0">Languages</dt>
-                            <dd className="text-[var(--color-text-muted)]">Python, SQL, Julia, TypeScript, C++, Bash</dd>
-                        </div>
-                        <div className="flex flex-col sm:flex-row sm:gap-4">
-                            <dt className="font-semibold text-[var(--color-heading)] sm:w-36 shrink-0">DevOps</dt>
-                            <dd className="text-[var(--color-text-muted)]">Docker, Kubernetes, GitHub Actions</dd>
-                        </div>
-                        <div className="flex flex-col sm:flex-row sm:gap-4">
-                            <dt className="font-semibold text-[var(--color-heading)] sm:w-36 shrink-0">Observability</dt>
-                            <dd className="text-[var(--color-text-muted)]">Prometheus, Grafana, Datadog, Sentry, Langfuse</dd>
-                        </div>
-                    </dl>
+                    <div>
+                        <dl className="space-y-3 text-sm">
+                            <div className="flex flex-col sm:flex-row sm:gap-4">
+                                <dt className="font-semibold text-[var(--color-heading)] sm:w-36 shrink-0">ML & LLMs</dt>
+                                <dd className="text-[var(--color-text-muted)]">PyTorch, HF Transformers, vLLM, LangGraph, LlamaIndex, MCP/FastMCP, LLaMA-Factory</dd>
+                            </div>
+                            <div className="flex flex-col sm:flex-row sm:gap-4">
+                                <dt className="font-semibold text-[var(--color-heading)] sm:w-36 shrink-0">Data & infra</dt>
+                                <dd className="text-[var(--color-text-muted)]">Spark, Airflow, Databricks, AWS, GCP, Docker, Kubernetes</dd>
+                            </div>
+                            <div className="flex flex-col sm:flex-row sm:gap-4">
+                                <dt className="font-semibold text-[var(--color-heading)] sm:w-36 shrink-0">Languages</dt>
+                                <dd className="text-[var(--color-text-muted)]">Python, SQL, Julia, TypeScript, C++, CUDA</dd>
+                            </div>
+                        </dl>
+                        <p className="text-sm text-[var(--color-text-faint)] mt-4">
+                            <a href="/resume.pdf" target="_blank">Full stack on my resume ↗</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </main>

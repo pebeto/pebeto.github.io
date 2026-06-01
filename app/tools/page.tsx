@@ -3,6 +3,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Tools",
+    description: "The software and hardware Jose Esparza uses daily: Arch Linux, Neovim, Sway, zsh and more.",
+    alternates: { canonical: "/tools" },
 };
 
 export default async function Tools() {
@@ -13,18 +15,19 @@ export default async function Tools() {
         { title: "Database", value: "DataGrip", desc: "Free educational license through my MSc program.", href: "https://www.jetbrains.com/datagrip/" },
         { title: "Browser", value: "Helium", desc: "Simplicity, no privacy concerns. Avoiding bloat.", href: "https://helium.computer/" },
         { title: "Code assistant", value: "OpenCode", desc: 'Running sakamakismile/Qwen3.6-27B-Text-NVFP4-MTP. I prefer to "operate" it and understand the solution before using it.', href: "https://opencode.ai/" },
+        { title: "Dotfiles", value: "pebeto/dotfiles", desc: "My whole working environment in one repo: Sway, Neovim, zsh and the rest.", href: "https://github.com/pebeto/dotfiles" },
     ];
 
     const personalTools = [
-        { title: "Daily notes", value: "Moleskine notebook", desc: "Paper keeps my mind focused and avoids digital distractions.", href: "https://www.moleskine.com/en-us/" },
+        { title: "Journaling", value: "Moleskine notebook", desc: "Paper keeps my mind focused and avoids digital distractions.", href: "https://www.moleskine.com/en-us/" },
         { title: "Agenda", value: "Org Mode", desc: "Used in Neovim via nvim-orgmode. Never miss a birthday message.", href: "https://orgmode.org/" },
-        { title: "Note-taking", value: "Traveler's notebook", desc: "Passport size — doubles as a wallet. Always with me.", href: "https://shop.travelerscompanyusa.com/products/travelers-notebook-passport-size-brown" },
+        { title: "Pocket notes", value: "Traveler's notebook", desc: "Passport size, doubles as a wallet. Always with me.", href: "https://shop.travelerscompanyusa.com/products/travelers-notebook-passport-size-brown" },
         { title: "Syncing", value: "Syncthing", desc: "Self-hosted file sync. No third-party services.", href: "https://syncthing.net/" },
     ];
 
     return (
         <main className="max-w-6xl mx-auto px-6 sm:px-12 py-16 space-y-16">
-            <section>
+            <section className="max-w-3xl">
                 <h2 className="text-2xl font-semibold text-[var(--color-heading)] mb-5">
                     Why this page?
                 </h2>
@@ -35,7 +38,7 @@ export default async function Tools() {
                 </p>
             </section>
 
-            <section>
+            <section className="max-w-3xl">
                 <h2 className="text-2xl font-semibold text-[var(--color-heading)] mb-5">
                     OS
                 </h2>
@@ -48,12 +51,12 @@ export default async function Tools() {
                         <Link href="https://swaywm.org/" target="_blank">
                             Sway
                         </Link>
-                        — I'm in the fields of Wayland.
+                        . I'm in the fields of Wayland.
                     </p>
                 </div>
             </section>
 
-            <section className="space-y-6">
+            <section className="max-w-3xl space-y-6">
                 <h2 className="text-2xl font-semibold text-[var(--color-heading)]">
                     Development tools
                 </h2>
@@ -76,7 +79,7 @@ export default async function Tools() {
                 </div>
             </section>
 
-            <section className="space-y-6">
+            <section className="max-w-3xl space-y-6">
                 <h2 className="text-2xl font-semibold text-[var(--color-heading)]">
                     Personal tools
                 </h2>

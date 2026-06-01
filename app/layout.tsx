@@ -18,16 +18,28 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+    metadataBase: new URL("https://www.joseesparza.me"),
     title: {
         default: "Jose Esparza | Senior ML Engineer",
         template: "%s · Jose Esparza",
     },
     description: "Senior ML Engineer shipping production LLM systems with LangGraph, RAG and fine-tuned Llama models. Open-source Julia maintainer.",
+    alternates: {
+        canonical: "/",
+    },
     openGraph: {
         title: "Jose Esparza | Senior ML Engineer",
         description: "Senior ML Engineer shipping production LLM systems with LangGraph, RAG and fine-tuned Llama models. Open-source Julia maintainer.",
+        url: "https://www.joseesparza.me",
+        siteName: "Jose Esparza",
         type: "website",
-        images: ["/profile.jpeg"],
+        images: [{ url: "/og.png", width: 1200, height: 630, alt: "Jose Esparza — Senior ML Engineer" }],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Jose Esparza | Senior ML Engineer",
+        description: "Senior ML Engineer shipping production LLM systems with LangGraph, RAG and fine-tuned Llama models. Open-source Julia maintainer.",
+        images: ["/og.png"],
     },
 };
 

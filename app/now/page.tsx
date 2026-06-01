@@ -4,6 +4,8 @@ import DaysSince from "./days-since";
 
 export const metadata: Metadata = {
     title: "Now",
+    description: "What Jose Esparza is focused on right now: CUDA and kernel design, profiling production code, and a self-directed ML reading list.",
+    alternates: { canonical: "/now" },
 };
 
 export default function Now() {
