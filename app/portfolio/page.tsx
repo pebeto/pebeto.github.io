@@ -66,6 +66,7 @@ export default async function Portfolio() {
 
                     <div className="space-y-5">
                         {[
+                            { href: "https://huggingface.co/pebeto/Llama-3.1-70B-LatamGPT-SFT-1.0-NVFP4", title: "LatamGPT-70B-NVFP4", desc: "NVFP4 (W4A4) quantization of LatamGPT 70B." },
                             { href: "https://github.com/JuliaAI/MLJ.jl", title: "MLJ.jl", desc: "A Julia machine learning framework." },
                             { href: "https://github.com/JuliaAI/DearDiary.jl", title: "DearDiary.jl", desc: "A machine learning experiment tracking tool for Julia." },
                             { href: "https://github.com/pebeto/MichiBoost.jl", title: "MichiBoost.jl", desc: "CatBoost implementation in Julia." },
