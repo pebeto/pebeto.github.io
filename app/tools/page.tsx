@@ -14,7 +14,7 @@ export default async function Tools() {
         { title: "Terminal", value: "foot", desc: "A nice terminal written in C.", href: "https://codeberg.org/dnkl/foot" },
         { title: "Database", value: "DataGrip", desc: "Free educational license through my MSc program.", href: "https://www.jetbrains.com/datagrip/" },
         { title: "Browser", value: "Helium", desc: "Simplicity, no privacy concerns. Avoiding bloat.", href: "https://helium.computer/" },
-        { title: "Code assistant", value: "OpenCode", desc: 'Running sakamakismile/Qwen3.6-27B-Text-NVFP4-MTP. I prefer to "operate" it and understand the solution before using it.', href: "https://opencode.ai/" },
+        { title: "Code assistant", value: "OpenCode", desc: 'Running unsloth/Devstral-Small-2-24B-Instruct-2512-GGUF. I prefer to "operate" it and understand the solution before using it.', href: "https://opencode.ai/" },
         { title: "Dotfiles", value: "pebeto/dotfiles", desc: "My whole working environment in one repo: Sway, Neovim, zsh and the rest.", href: "https://github.com/pebeto/dotfiles" },
     ];
 
