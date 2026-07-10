@@ -1,0 +1,49 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getAllTags, getPostsByTag } from "@/lib/posts";
+import PostCard from "@/components/blog/PostCard.astro";
+import TagFilter from "@/components/blog/TagFilter.astro";
+
+export async function getStaticPaths() {
+    const tags = await getAllTags();
+    return tags.map((tag) => ({ params: { tag } }));
+}
+
+const { tag } = Astro.params;
+const allTags = await getAllTags();
+const posts = await getPostsByTag(tag);
+---
+
+<Layout
+    title={`Posts tagged "${tag}"`}
+    description={`Blog posts about ${tag} by Jose Esparza.`}
+    canonical={`/blog/tag/${tag}`}
+>
+    <main class="max-w-6xl mx-auto px-6 sm:px-12 py-16">
+        <div class="max-w-3xl">
+            <div
+                class="text-xs text-[var(--color-text-faint)] uppercase tracking-wider mb-4"
+            >
+                Blog
+            </div>
+            <h2
+                class="text-2xl font-semibold text-[var(--color-heading)] mb-8"
+            >
+                Tagged &ldquo;{tag}&rdquo;
+            </h2>
+
+            <TagFilter tags={allTags} activeTag={tag} />
+
+            <div class="space-y-2">
+                {
+                    posts.length === 0 && (
+                        <p class="text-[var(--color-text-muted)]">
+                            No posts with this tag.
+                        </p>
+                    )
+                }
+                {posts.map((post) => <PostCard post={post} />)}
+            </div>
+        </div>
+    </main>
+</Layout>

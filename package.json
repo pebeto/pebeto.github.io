@@ -2,31 +2,22 @@
   "name": "pebeto.github.io",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@tailwindcss/postcss": "^4.3.0",
-    "rehype-raw": "^7.0.0",
-    "remark-gfm": "^4.0.1"
+    "@fontsource-variable/ibm-plex-sans": "^5.2.5",
+    "@tailwindcss/vite": "^4.1.4",
+    "astro": "^7.0.5",
+    "tailwindcss": "^4.1.4"
   },
   "devDependencies": {
-    "@types/node": "^25.9.0",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "autoprefixer": "^10.5.0",
-    "eslint": "^10.4.0",
-    "eslint-config-next": "^16.2.6",
-    "next": "^16.2.6",
-    "postcss": "^8.5.14",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6",
-    "react-markdown": "^10.1.0",
-    "swr": "^2.4.1",
-    "tailwindcss": "^4.3.0",
-    "typescript": "^6.0.3"
+    "@astrojs/check": "^0.9.9",
+    "@types/node": "^22.13.9",
+    "typescript": "^5.8.3"
   }
 }

@@ -1,0 +1,76 @@
+---
+import { render } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import { getAllPosts } from "@/lib/posts";
+
+export async function getStaticPaths() {
+    const posts = await getAllPosts();
+    return posts.map((post) => ({
+        params: { slug: post.id },
+        props: { post },
+    }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const date = new Date(post.data.date + "T00:00:00");
+const formattedDate = date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+});
+---
+
+<Layout
+    title={post.data.title}
+    description={post.data.excerpt}
+    canonical={`/blog/${post.id}`}
+    ogTitle={post.data.title}
+    ogDescription={post.data.excerpt}
+>
+    <main class="max-w-6xl mx-auto px-6 sm:px-12 py-16">
+        <div class="max-w-3xl">
+            <div
+                class="text-xs text-[var(--color-text-faint)] uppercase tracking-wider mb-4"
+            >
+                Blog
+            </div>
+            <h2
+                class="text-2xl font-semibold text-[var(--color-heading)] mb-3"
+            >
+                {post.data.title}
+            </h2>
+            <div class="text-xs text-[var(--color-text-faint)] mb-10">
+                {formattedDate}
+                {
+                    post.data.tags.length > 0 && (
+                        <>
+                            {" · "}
+                            <span class="text-[var(--color-text-muted)]">
+                                {post.data.tags.join(", ")}
+                            </span>
+                        </>
+                    )
+                }
+            </div>
+
+            <div class="text-[var(--color-text)] leading-relaxed">
+                <article class="prose-blog">
+                    <Content />
+                </article>
+            </div>
+
+            <div
+                class="mt-12 pt-6 border-t border-[var(--color-border-light)]"
+            >
+                <a
+                    href="/blog"
+                    class="text-sm text-[var(--color-link)] hover:text-[var(--color-link-hover)] transition-colors"
+                >
+                    ← Back to blog
+                </a>
+            </div>
+        </div>
+    </main>
+</Layout>

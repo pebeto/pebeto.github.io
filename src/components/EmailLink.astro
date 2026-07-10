@@ -1,0 +1,18 @@
+---
+// Email address is assembled client-side to keep it out of the static HTML
+// that scrapers read.
+---
+
+<span id="email-link" class="cursor-default">Email</span>
+
+<script>
+    const el = document.getElementById("email-link");
+    if (el) {
+        const user = "joseesparzadc";
+        const domain = "gmail.com";
+        const a = document.createElement("a");
+        a.href = `mailto:${user}@${domain}`;
+        a.textContent = "Email";
+        el.replaceWith(a);
+    }
+</script>

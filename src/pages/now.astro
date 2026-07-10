@@ -1,0 +1,73 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+const nowItems = [
+    "Still recording my band's album (a true masterpiece; if you are a record label, please hire us)",
+    "Going deeper into CUDA and kernel design",
+    "Profiling hot paths in production code",
+    "Playing Death Stranding 2 (awesome game, I highly recommend it)",
+    "Working through a self-directed PhD-style ML reading list",
+];
+---
+
+<Layout
+    title="Now"
+    description="What Jose Esparza is focused on right now: CUDA and kernel design, profiling production code, and a self-directed ML reading list."
+    canonical="/now"
+>
+    <main class="max-w-6xl mx-auto px-6 sm:px-12 py-16">
+        <div class="flex flex-col md:flex-row md:gap-12 lg:gap-20">
+            <div class="md:w-2/3 space-y-10">
+                <h2 class="text-2xl font-semibold text-[var(--color-heading)]">
+                    What I'm doing{" "}
+                    <a href="https://nownownow.com/about" target="_blank">now</a>
+                    ?
+                </h2>
+
+                <ul class="space-y-5 text-[var(--color-text)]">
+                    {
+                        nowItems.map((item) => (
+                            <li class="flex items-start gap-3">
+                                <span class="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--color-dot)] shrink-0" />
+                                <span>{item}</span>
+                            </li>
+                        ))
+                    }
+                </ul>
+
+                <p class="text-sm text-[var(--color-text-faint)]">
+                    Last update: <span id="days-since">0</span> days ago
+                </p>
+            </div>
+
+            <div class="md:w-1/3 md:shrink-0 mt-12 md:mt-0">
+                <div class="md:sticky md:top-12">
+                    <img
+                        src="/emvdmv.jpeg"
+                        alt="Playing with El Mejor Verano de mi Vida"
+                        class="w-full max-w-xs md:max-w-none mx-auto md:mx-0 rounded-sm"
+                    />
+                    <p class="text-xs text-[var(--color-text-faint)] mt-4 italic">
+                        Playing with{" "}
+                        <a
+                            href="https://pebeto.github.io/elmejorveranodemivida/"
+                            target="_blank"
+                        >
+                            El Mejor Verano de mi Vida
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<script>
+    const target = new Date("2026-05-18");
+    const now = new Date();
+    const days = Math.round(
+        (now.valueOf() - target.valueOf()) / (1000 * 60 * 60 * 24)
+    );
+    const el = document.getElementById("days-since");
+    if (el) el.textContent = String(days);
+</script>

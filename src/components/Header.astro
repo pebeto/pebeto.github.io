@@ -1,0 +1,70 @@
+---
+import subheaders from "@/data/subheaders.json";
+import ThemeToggle from "@/components/ThemeToggle.astro";
+
+const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/now", label: "Now" },
+    { href: "/portfolio", label: "Portfolio" },
+    { href: "/tools", label: "Tools" },
+    { href: "/blog", label: "Blog" },
+];
+---
+
+<header class="border-b border-[var(--color-border)]">
+    <div class="max-w-6xl mx-auto px-6 sm:px-12 py-8">
+        <div
+            class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2"
+        >
+            <div>
+                <h1
+                    class="text-xl font-semibold tracking-tight text-[var(--color-heading)]"
+                >
+                    Jose Esparza
+                </h1>
+                <p
+                    class="text-xs text-[var(--color-text-faint)] tracking-wide uppercase mt-1"
+                >
+                    Trujillo, Peru · UTC-5<span id="subheader"></span>
+                </p>
+            </div>
+
+            <nav class="flex flex-wrap items-center gap-0">
+                {
+                    navLinks.map((link, i) => (
+                        <span class="flex items-center">
+                            {i > 0 && (
+                                <span class="px-3 text-xs text-[var(--color-text-faint)]">
+                                    /
+                                </span>
+                            )}
+                            <a
+                                href={link.href}
+                                class="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors duration-150"
+                            >
+                                {link.label}
+                            </a>
+                        </span>
+                    ))
+                }
+                <span class="px-3 text-xs text-[var(--color-text-faint)]">/</span>
+                <a
+                    href="/resume.pdf"
+                    target="_blank"
+                    class="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors duration-150"
+                >
+                    Resume ↗
+                </a>
+                <ThemeToggle />
+            </nav>
+        </div>
+    </div>
+</header>
+
+<script is:inline define:vars={{ subheaders }}>
+    const el = document.getElementById("subheader");
+    if (el && subheaders.length > 0) {
+        const pick = subheaders[Math.floor(Math.random() * subheaders.length)];
+        el.textContent = ` · ${pick}`;
+    }
+</script>

@@ -1,0 +1,121 @@
+---
+import "@fontsource-variable/ibm-plex-sans";
+import "@/styles/global.css";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+
+const SITE_TITLE = "Jose Esparza | Senior ML Engineer";
+const SITE_DESCRIPTION =
+    "Senior ML Engineer shipping production LLM systems with LangGraph, RAG and fine-tuned Llama models. Open-source Julia maintainer.";
+
+interface Props {
+    /** Page title. Rendered as "<title> · Jose Esparza". Omit for the site default. */
+    title?: string;
+    /** Meta description for this page. Falls back to the site description. */
+    description?: string;
+    /** Canonical path, e.g. "/portfolio". Defaults to the current path. */
+    canonical?: string;
+    /** Open Graph / Twitter title. Defaults to the site title. */
+    ogTitle?: string;
+    /** Open Graph / Twitter description. Defaults to the site description. */
+    ogDescription?: string;
+    /** Open Graph / Twitter image path. Defaults to /og.png. */
+    ogImage?: string;
+}
+
+const {
+    title,
+    description = SITE_DESCRIPTION,
+    canonical,
+    ogTitle = SITE_TITLE,
+    ogDescription = SITE_DESCRIPTION,
+    ogImage = "/og.png",
+} = Astro.props;
+
+const pageTitle = title ? `${title} · Jose Esparza` : SITE_TITLE;
+const canonicalURL = new URL(canonical ?? Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(ogImage, Astro.site);
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Jose Esparza",
+    url: "https://www.joseesparza.me",
+    image: "https://www.joseesparza.me/profile.jpeg",
+    jobTitle: "Senior Machine Learning Engineer",
+    description:
+        "Senior ML Engineer shipping production LLM systems with LangGraph, RAG and fine-tuned Llama models. Open-source Julia maintainer.",
+    sameAs: [
+        "https://github.com/pebeto",
+        "https://linkedin.com/in/josesparza",
+        "https://orcid.org/0000-0002-9372-3763",
+    ],
+    alumniOf: [
+        { "@type": "CollegeOrUniversity", name: "Universidad Privada del Norte" },
+        { "@type": "CollegeOrUniversity", name: "University of London" },
+    ],
+    address: {
+        "@type": "PostalAddress",
+        addressLocality: "Trujillo",
+        addressRegion: "La Libertad",
+        addressCountry: "PE",
+    },
+};
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+        <link rel="sitemap" href="/sitemap.xml" />
+        <link rel="canonical" href={canonicalURL.href} />
+
+        <title>{pageTitle}</title>
+        <meta name="description" content={description} />
+
+        <meta
+            name="google-site-verification"
+            content="Z8eB-LcCtKoVuPT1qEVRbQzeV5rpJ7Tt_OHjkkJJrKM"
+        />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Jose Esparza" />
+        <meta property="og:title" content={ogTitle} />
+        <meta property="og:description" content={ogDescription} />
+        <meta property="og:url" content={canonicalURL.href} />
+        <meta property="og:image" content={ogImageURL.href} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Jose Esparza — Senior ML Engineer" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={ogTitle} />
+        <meta name="twitter:description" content={ogDescription} />
+        <meta name="twitter:image" content={ogImageURL.href} />
+
+        <script
+            is:inline
+            type="application/ld+json"
+            set:html={JSON.stringify(jsonLd)}
+        />
+
+        <script is:inline>
+            (function () {
+                var stored = localStorage.getItem("theme");
+                var prefersDark = window.matchMedia(
+                    "(prefers-color-scheme: dark)"
+                ).matches;
+                if (stored === "dark" || (!stored && prefersDark)) {
+                    document.documentElement.setAttribute("data-theme", "dark");
+                }
+            })();
+        </script>
+    </head>
+    <body>
+        <Header />
+        <slot />
+        <Footer />
+    </body>
+</html>

@@ -1,0 +1,41 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getAllPosts, getAllTags } from "@/lib/posts";
+import PostCard from "@/components/blog/PostCard.astro";
+import TagFilter from "@/components/blog/TagFilter.astro";
+
+const allPosts = await getAllPosts();
+const allTags = await getAllTags();
+---
+
+<Layout
+    title="Blog"
+    description="Technical posts and personal essays by Jose Esparza."
+    canonical="/blog"
+>
+    <main class="max-w-6xl mx-auto px-6 sm:px-12 py-16">
+        <div class="max-w-3xl">
+            <div
+                class="text-xs text-[var(--color-text-faint)] uppercase tracking-wider mb-4"
+            >
+                Blog
+            </div>
+            <h2
+                class="text-2xl font-semibold text-[var(--color-heading)] mb-8"
+            >
+                Posts
+            </h2>
+
+            <TagFilter tags={allTags} activeTag={null} />
+
+            <div class="space-y-2">
+                {
+                    allPosts.length === 0 && (
+                        <p class="text-[var(--color-text-muted)]">No posts yet.</p>
+                    )
+                }
+                {allPosts.map((post) => <PostCard post={post} />)}
+            </div>
+        </div>
+    </main>
+</Layout>
