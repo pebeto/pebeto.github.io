@@ -111,6 +111,42 @@ a:hover {
   margin-top: 1.25em;
 }
 
+/* Tailwind's preflight resets heading sizes to inherit, so markdown
+   headings need an explicit scale to regain their visual hierarchy. */
+.prose-blog h1 {
+  font-size: 1.75rem;
+  margin-top: 2em;
+}
+
+.prose-blog h2 {
+  font-size: 1.4rem;
+  margin-top: 1.75em;
+}
+
+.prose-blog h3 {
+  font-size: 1.15rem;
+  margin-top: 1.5em;
+}
+
+.prose-blog h4 {
+  font-size: 1rem;
+  margin-top: 1.25em;
+}
+
+.prose-blog h5,
+.prose-blog h6 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-top: 1.25em;
+}
+
+.prose-blog h1:first-child,
+.prose-blog h2:first-child,
+.prose-blog h3:first-child {
+  margin-top: 0;
+}
+
 .prose-blog a {
   color: var(--color-link);
   text-decoration: none;
@@ -184,9 +220,19 @@ a:hover {
   margin: 2em 0;
 }
 
-.prose-blog ul,
+/* Tailwind's preflight sets `list-style: none` on ul/ol, so restore markers. */
+.prose-blog ul {
+  padding-left: 1.5em;
+  list-style-type: disc;
+}
+
 .prose-blog ol {
   padding-left: 1.5em;
+  list-style-type: decimal;
+}
+
+.prose-blog ul ul {
+  list-style-type: circle;
 }
 
 .prose-blog li + li {
