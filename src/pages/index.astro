@@ -1,5 +1,39 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+
+const interests = [
+    {
+        area: "Language models",
+        detail: "Agentic architectures, retrieval-augmented generation, supervised fine-tuning",
+    },
+    {
+        area: "Efficient inference",
+        detail: "Low-bit quantization (NVFP4 / W4A4), on-device and CPU-only deployment",
+    },
+    {
+        area: "Representation learning",
+        detail: "Topic modeling, semantic retrieval, recommender systems",
+    },
+    {
+        area: "Scientific computing",
+        detail: "Open-source machine learning tooling for the Julia ecosystem",
+    },
+];
+
+const stack = [
+    {
+        label: "ML & LLMs",
+        items: "PyTorch, HF Transformers, vLLM, llm-compressor, LLaMA-Factory, LangGraph, LlamaIndex, MCP/FastMCP",
+    },
+    {
+        label: "Data & infra",
+        items: "Spark, Airflow, Databricks, AWS, GCP, PostgreSQL/pgvector, Docker, Kubernetes",
+    },
+    {
+        label: "Languages",
+        items: "Python, SQL, Julia, TypeScript, C++, CUDA",
+    },
+];
 ---
 
 <Layout canonical="/">
@@ -13,7 +47,7 @@ import Layout from "@/layouts/Layout.astro";
                         class="w-full max-w-xs md:max-w-none mx-auto md:mx-0 rounded-sm"
                     />
                     <p class="text-xs text-[var(--color-text-faint)] mt-4 italic">
-                        Eating soup
+                        Jose Esparza
                     </p>
                 </div>
             </div>
@@ -21,181 +55,118 @@ import Layout from "@/layouts/Layout.astro";
             <div
                 class="md:w-2/3 md:pl-10 md:border-l md:border-[var(--color-border-light)] space-y-10 mt-12 md:mt-0"
             >
-                <h2 class="text-2xl font-semibold text-[var(--color-heading)]">
-                    About
-                </h2>
-
-                <div class="space-y-6 text-[var(--color-text)] leading-relaxed">
+                <div class="space-y-5 text-[var(--color-text)] leading-relaxed">
                     <p>
-                        I like owning a system from the first prototype to the
-                        dashboards that watch it in production. As a Senior ML
-                        Engineer, most of what I ship now is LLM systems: agentic
-                        assistants with LangGraph and MCP, RAG over vector
-                        databases, and fine-tuned Llama models for
-                        domain-specific generation, plus the BI and observability
-                        around them. I've worked across fintech, edtech, retail
-                        and large enterprise.
-                    </p>
-                    <div>
-                        <p>Recent builds:</p>
-                        <ul class="space-y-2 mt-3">
-                            <li class="flex items-start gap-3">
-                                <span
-                                    class="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--color-dot)] shrink-0"
-                                ></span>
-                                <span>WhatsApp customer-support agents</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span
-                                    class="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--color-dot)] shrink-0"
-                                ></span>
-                                <span>Semantic search over a lesson catalog</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span
-                                    class="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--color-dot)] shrink-0"
-                                ></span>
-                                <span
-                                    >A Llama-based lesson generator fine-tuned on
-                                    expert-picked curriculum to preserve a
-                                    specific technical-English voice</span
-                                >
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span
-                                    class="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--color-dot)] shrink-0"
-                                ></span>
-                                <span>High-volume retailer data ingestion</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <p>
-                        Earlier in my career I led a five-engineer data team
-                        building AWS pipelines that ingested product-availability
-                        data from Cencosud, Falabella and Walmart, and trained
-                        default-risk models for fintech lenders. Before that I
-                        engineered raw-material microservices for INDITEX,
-                        refactored the Spanish Ministry of Justice's certificate
-                        system to handle 500k+ records, and shipped a full-stack
-                        risk platform for Barrick Gold. My{" "}
-                        <a href="/resume.pdf" target="_blank">resume</a>{" "}
-                        has the specifics.
+                        I engineer large language model systems and the
+                        infrastructure that keeps them running in production:
+                        agentic architectures, retrieval-augmented generation,
+                        supervised fine-tuning and low-bit quantization. I am a
+                        Senior Artificial Intelligence Engineer at Subatomic and
+                        hold a concurrent contract at Maximo. I also founded{" "}
+                        <a href="https://hoja-solutions.github.io" target="_blank">
+                            Hoja
+                        </a>, an AI and software consultancy.
                     </p>
                     <p>
-                        I'm deep in the Julia open-source community. Google Summer
-                        of Code 2023 funded my work on{" "}
-                        <a
-                            href="https://summerofcode.withgoogle.com/archive/2023/projects/iRxuzeGJ"
-                            target="_blank"
-                        >
-                            empowering Julia-based Data Science with MLflow
-                        </a>. I contribute to the{" "}
+                        For seven years before that I built machine learning and
+                        data systems across education, fintech, retail, mining and
+                        the public sector, first as an engineer and later leading
+                        teams. You will find those years on my{" "}
+                        <a href="/resume.pdf" target="_blank">resume</a>, and the
+                        systems and publications on{" "}
+                        <a href="/portfolio">the portfolio page</a>.
+                    </p>
+                    <p>
+                        I am completing an MSc in Computer Science at the{" "}
+                        <a href="https://www.london.ac.uk/" target="_blank">
+                            University of London
+                        </a>{" "}
+                        (expected December 2026), and I graduated in Software
+                        Engineering from{" "}
+                        <a href="https://www.upn.edu.pe/" target="_blank">
+                            Universidad Privada del Norte
+                        </a>{" "}
+                        with a 4.0 GPA. I started research at Binghamton
+                        University in Arti Ramesh's lab, where Gisella Bejarano
+                        mentored me; we published our work on public discourse
+                        around COVID-19 vaccination at CSoNet 2021.
+                    </p>
+                    <p>
+                        In Julia I maintain open-source scientific software:{" "}
                         <a
                             href="https://alan-turing-institute.github.io/MLJ.jl/dev/"
                             target="_blank"
                         >
-                            Machine Learning in Julia (MLJ)
-                        </a>{" "}
-                        framework and maintain{" "}
+                            MLJ.jl
+                        </a>,{" "}
                         <a
                             href="https://github.com/JuliaAI/DearDiary.jl"
                             target="_blank"
                         >
                             DearDiary.jl
                         </a>{" "}
-                        under the JuliaAI organization.
-                    </p>
-                    <p>
-                        I hold a B.S. in Software Engineering from{" "}
-                        <a href="https://www.upn.edu.pe/" target="_blank">
-                            Universidad Privada del Norte
-                        </a>, where I graduated with a 4.0 GPA. At Skolkovo's{" "}
+                        under the JuliaAI organization, and{" "}
                         <a
-                            href="https://smiles.skoltech.ru/school-2020"
+                            href="https://github.com/pebeto/MichiBoost.jl"
                             target="_blank"
                         >
-                            SMILES 2020
-                        </a>{" "}
-                        summer school I placed in the top 10% of 2,000+
-                        applicants and presented my work on Convolutional Neural
-                        Networks for respiratory-condition detection. I'm
-                        pursuing an MSc in Computer Science at the{" "}
-                        <a href="https://www.london.ac.uk/" target="_blank">
-                            University of London
-                        </a>.
+                            MichiBoost.jl
+                        </a>. Google Summer of Code funded my work bringing MLflow
+                        to the ecosystem in 2023.
                     </p>
                     <p>
-                        As a REPU Computer Science alum, I analyzed 80,000
-                        COVID-19 texts with Gisella Bejarano in Arti Ramesh's lab
-                        at Binghamton University, and we published a{" "}
-                        <a
-                            href="https://link.springer.com/chapter/10.1007/978-3-030-91434-9_18"
-                            target="_blank"
-                        >
-                            paper
-                        </a>{" "}
-                        indexed in the{" "}
-                        <a
-                            href="https://pesquisa.bvsalud.org/global-literature-on-novel-coronavirus-2019-ncov/resource/pt/covidwho-1593151?lang=en"
-                            target="_blank"
-                        >
-                            WHO COVID-19 Research Database
-                        </a>.
-                    </p>
-                    <p>
-                        Beyond the code, I do vocals in a band called{" "}
+                        Outside work I sing in{" "}
                         <a
                             href="https://pebeto.github.io/elmejorveranodemivida/"
                             target="_blank"
                         >
                             El mejor verano de mi vida
-                        </a>{" "}
-                        (The best summer of my life). We got counted in the fifth
-                        wave of emo, and I'm proud of it. I also play Magic: The
-                        Gathering and spend time with my two cats.
+                        </a>, play classical guitar and Magic: The Gathering, and
+                        keep two cats.
                     </p>
                 </div>
 
-                <h2
-                    class="text-2xl font-semibold text-[var(--color-heading)] pt-4"
-                >
-                    Tech stack
-                </h2>
+                <div>
+                    <h2
+                        class="text-xs font-semibold uppercase tracking-wider text-[var(--color-text-faint)] mb-4"
+                    >
+                        Research interests
+                    </h2>
+                    <dl class="space-y-3 text-sm">
+                        {
+                            interests.map((interest) => (
+                                <div class="flex flex-col sm:flex-row sm:gap-4">
+                                    <dt class="font-semibold text-[var(--color-heading)] sm:w-44 shrink-0">
+                                        {interest.area}
+                                    </dt>
+                                    <dd class="text-[var(--color-text-muted)]">
+                                        {interest.detail}
+                                    </dd>
+                                </div>
+                            ))
+                        }
+                    </dl>
+                </div>
 
                 <div>
+                    <h2
+                        class="text-xs font-semibold uppercase tracking-wider text-[var(--color-text-faint)] mb-4"
+                    >
+                        Technical stack
+                    </h2>
                     <dl class="space-y-3 text-sm">
-                        <div class="flex flex-col sm:flex-row sm:gap-4">
-                            <dt
-                                class="font-semibold text-[var(--color-heading)] sm:w-36 shrink-0"
-                            >
-                                ML & LLMs
-                            </dt>
-                            <dd class="text-[var(--color-text-muted)]">
-                                PyTorch, HF Transformers, vLLM, LangGraph,
-                                LlamaIndex, MCP/FastMCP, LLaMA-Factory
-                            </dd>
-                        </div>
-                        <div class="flex flex-col sm:flex-row sm:gap-4">
-                            <dt
-                                class="font-semibold text-[var(--color-heading)] sm:w-36 shrink-0"
-                            >
-                                Data & infra
-                            </dt>
-                            <dd class="text-[var(--color-text-muted)]">
-                                Spark, Airflow, Databricks, AWS, GCP, Docker,
-                                Kubernetes
-                            </dd>
-                        </div>
-                        <div class="flex flex-col sm:flex-row sm:gap-4">
-                            <dt
-                                class="font-semibold text-[var(--color-heading)] sm:w-36 shrink-0"
-                            >
-                                Languages
-                            </dt>
-                            <dd class="text-[var(--color-text-muted)]">
-                                Python, SQL, Julia, TypeScript, C++, CUDA
-                            </dd>
-                        </div>
+                        {
+                            stack.map((group) => (
+                                <div class="flex flex-col sm:flex-row sm:gap-4">
+                                    <dt class="font-semibold text-[var(--color-heading)] sm:w-44 shrink-0">
+                                        {group.label}
+                                    </dt>
+                                    <dd class="text-[var(--color-text-muted)]">
+                                        {group.items}
+                                    </dd>
+                                </div>
+                            ))
+                        }
                     </dl>
                     <p class="text-sm text-[var(--color-text-faint)] mt-4">
                         <a href="/resume.pdf" target="_blank"

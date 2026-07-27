@@ -4,9 +4,9 @@ import "@/styles/global.css";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 
-const SITE_TITLE = "Jose Esparza | Senior ML Engineer";
+const SITE_TITLE = "Jose Esparza | Senior AI Engineer";
 const SITE_DESCRIPTION =
-    "Senior ML Engineer shipping production LLM systems with LangGraph, RAG and fine-tuned Llama models. Open-source Julia maintainer.";
+    "Senior AI Engineer working on production LLM systems: agentic architectures, retrieval-augmented generation, fine-tuning and low-bit quantization. Open-source Julia maintainer and published researcher.";
 
 interface Props {
     /** Page title. Rendered as "<title> · Jose Esparza". Omit for the site default. */
@@ -42,9 +42,18 @@ const jsonLd = {
     name: "Jose Esparza",
     url: "https://www.joseesparza.me",
     image: "https://www.joseesparza.me/profile.jpeg",
-    jobTitle: "Senior Machine Learning Engineer",
+    jobTitle: "Senior Artificial Intelligence Engineer",
     description:
-        "Senior ML Engineer shipping production LLM systems with LangGraph, RAG and fine-tuned Llama models. Open-source Julia maintainer.",
+        "Senior AI Engineer working on production LLM systems: agentic architectures, retrieval-augmented generation, fine-tuning and low-bit quantization. Open-source Julia maintainer and published researcher.",
+    knowsAbout: [
+        "Large language models",
+        "Retrieval-augmented generation",
+        "Agentic systems",
+        "Model quantization",
+        "Topic modeling",
+        "Julia programming language",
+        "Data engineering",
+    ],
     sameAs: [
         "https://github.com/pebeto",
         "https://linkedin.com/in/josesparza",
@@ -88,7 +97,7 @@ const jsonLd = {
         <meta property="og:image" content={ogImageURL.href} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Jose Esparza — Senior ML Engineer" />
+        <meta property="og:image:alt" content="Jose Esparza, Senior AI Engineer" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={ogTitle} />

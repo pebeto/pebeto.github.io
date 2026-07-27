@@ -2,17 +2,17 @@
 import Layout from "@/layouts/Layout.astro";
 
 const nowItems = [
-    "Still recording my band's album (a true masterpiece; if you are a record label, please hire us)",
-    "Going deeper into CUDA and kernel design",
-    "Profiling hot paths in production code",
-    "Playing Death Stranding 2 (awesome game, I highly recommend it)",
-    "Working through a self-directed PhD-style ML reading list",
+    "Finishing my MSc in Computer Science at the University of London",
+    "Profiling hot paths in production inference code",
+    'Building <a href="https://hoja-solutions.github.io" target="_blank">Hoja</a>, an independent consultancy practice (slow but steady)',
+    "Recording an album with my band (label offers welcome)",
+    "Working toward Torment 12 in Diablo 4",
 ];
 ---
 
 <Layout
     title="Now"
-    description="What Jose Esparza is focused on right now: CUDA and kernel design, profiling production code, and a self-directed ML reading list."
+    description="Jose Esparza's current focus: an MSc in Computer Science, profiling production inference code, and an independent consultancy practice."
     canonical="/now"
 >
     <main class="max-w-6xl mx-auto px-6 sm:px-12 py-16">
@@ -21,7 +21,6 @@ const nowItems = [
                 <h2 class="text-2xl font-semibold text-[var(--color-heading)]">
                     What I'm doing{" "}
                     <a href="https://nownownow.com/about" target="_blank">now</a>
-                    ?
                 </h2>
 
                 <ul class="space-y-5 text-[var(--color-text)]">
@@ -29,7 +28,7 @@ const nowItems = [
                         nowItems.map((item) => (
                             <li class="flex items-start gap-3">
                                 <span class="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--color-dot)] shrink-0" />
-                                <span>{item}</span>
+                                <span set:html={item} />
                             </li>
                         ))
                     }
@@ -63,7 +62,7 @@ const nowItems = [
 </Layout>
 
 <script>
-    const target = new Date("2026-05-18");
+    const target = new Date("2026-07-25");
     const now = new Date();
     const days = Math.round(
         (now.valueOf() - target.valueOf()) / (1000 * 60 * 60 * 24)

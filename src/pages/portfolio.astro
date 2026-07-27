@@ -15,22 +15,154 @@ const groupedNotebooks = notebooks.reduce(
     {} as Record<string, FileResource[]>
 );
 
+const publications = [
+    {
+        title: "A Review of Topic Modeling: From Probabilistic Foundations to Neural and Multimodal Approaches",
+        authors: "Esparza, J.",
+        year: "2026",
+        venue: "Preprint, Zenodo",
+        href: "https://doi.org/10.5281/zenodo.20280741",
+        doi: "10.5281/zenodo.20280741",
+    },
+    {
+        title: "Understanding the Issues Surrounding COVID-19 Vaccine Roll Out via User Tweets",
+        authors: "Esparza, J., Bejarano, G., Ramesh, A., & Seetharam, A.",
+        year: "2021",
+        venue: "Computational Data and Social Networks (CSoNet 2021), Lecture Notes in Computer Science, pp. 197–205. Springer",
+        href: "https://doi.org/10.1007/978-3-030-91434-9_18",
+        doi: "10.1007/978-3-030-91434-9_18",
+    },
+    {
+        title: "Convolutional Neural Networks in Respiratory Conditions Detection: A Systematic Review of the Last 4 Years",
+        authors: "Esparza, J.",
+        year: "2020",
+        venue: "Research poster, Summer School of Machine Learning (SMILES 2020), Skolkovo Institute of Science and Technology",
+        href: "https://smiles.skoltech.ru/school-2020",
+        doi: null,
+    },
+];
+
+const systems = [
+    {
+        title: "Agentic AI-workforce platform",
+        org: "Subatomic",
+        desc: "I build a LangGraph agent system on FastAPI and Next.js: a ReAct supervisor over a self-critiquing four-sub-agent reasoning graph, plus ten specialized agents that integrate GitHub, Confluence, Monday.com, Slack and Google Drive. For retrieval I combined vector and full-text search with RRF/MMR reranking, chunk-level access control and provider failover. I also wrote the Redis job queue and WebSocket notifications behind the interaction-capture engine that feeds the CRM.",
+    },
+    {
+        title: "Agentic banking assistant",
+        org: "Maximo",
+        desc: "For customer support on WhatsApp I built a LangGraph agent grounded in a Postgres/pgvector knowledge base, AWS-backed OTP delivery, audio transcription with faster-whisper, and monthly financial reports that an LLM drafts on a schedule. I added an MCP server that exposes internal tools to LLM agents, and BI dashboards modeling interchange, GMV, spreads and user growth.",
+    },
+    {
+        title: "Curriculum machine learning tooling",
+        org: "The New England Center for Children",
+        desc: "I built a transformer recommender that surfaces semantically adjacent lessons at sub-second latency, so a query for \"tomato\" returns grocery shopping and meal preparation next to the direct matches. I also fine-tuned Llama 3.1 8B with LoRA for curriculum-resource generation, grounded in internal technical documentation; expert reviewers confirmed it held the curriculum's voice.",
+    },
+    {
+        title: "Retail data pipelines",
+        org: "Teamcore",
+        desc: "I led five engineers on AWS ETL (Glue, Athena, Lambda, S3) that ingested product-availability data from the B2B platforms of Cencosud, Falabella, Oxxo, Soriana and Walmart, and fed the dashboards our clients used for their decisions.",
+    },
+];
+
 const projects = [
-    { href: "https://huggingface.co/pebeto/Llama-3.1-70B-LatamGPT-SFT-1.0-NVFP4", title: "LatamGPT-70B-NVFP4", desc: "NVFP4 (W4A4) quantization of LatamGPT 70B." },
-    { href: "https://github.com/JuliaAI/MLJ.jl", title: "MLJ.jl", desc: "A Julia machine learning framework." },
-    { href: "https://github.com/JuliaAI/DearDiary.jl", title: "DearDiary.jl", desc: "A machine learning experiment tracking tool for Julia." },
-    { href: "https://github.com/pebeto/MichiBoost.jl", title: "MichiBoost.jl", desc: "CatBoost implementation in Julia." },
-    { href: "https://github.com/JuliaAI/MLFlowClient.jl", title: "MLFlowClient.jl", desc: "A Julia client for MLflow." },
-    { href: "https://github.com/pebeto/ARP.jl", title: "ARP.jl", desc: "Auto-Rotating Perceptrons in Julia." },
-    { href: "https://github.com/pebeto/pluto-design-system", title: "pluto-design-system", desc: "CSS framework styled in the Pluto.jl aesthetic." },
-    { href: "https://github.com/pebeto/missyhud.prx", title: "missyhud.prx", desc: "A PSP HUD plugin, written in C." },
-    { href: "https://github.com/pebeto/proton-ge-manager", title: "proton-ge-manager", desc: "Painless proton-ge installation for Steam Deck/Linux." },
+    {
+        href: "https://huggingface.co/pebeto/Llama-3.1-70B-LatamGPT-SFT-1.0-NVFP4",
+        title: "LatamGPT-70B-NVFP4",
+        desc: "NVFP4 (W4A4) quantization of LatamGPT's 70B model on a single 32 GB workstation.",
+    },
+    {
+        href: "https://huggingface.co/pebeto/amigo-lora",
+        title: "Amigo",
+        desc: "A privacy-first voice companion that runs a small LLM on a laptop CPU, with no GPU: faster-whisper, Qwen3.5-4B on llama.cpp, Piper TTS, Chroma retrieval and a persona LoRA. I built it for the Hugging Face Build Small hackathon.",
+    },
+    {
+        href: "https://github.com/JuliaAI/MLJ.jl",
+        title: "MLJ.jl",
+        desc: "A machine learning framework for Julia.",
+    },
+    {
+        href: "https://github.com/JuliaAI/DearDiary.jl",
+        title: "DearDiary.jl",
+        desc: "Experiment tracking for machine learning in Julia.",
+    },
+    {
+        href: "https://github.com/pebeto/MichiBoost.jl",
+        title: "MichiBoost.jl",
+        desc: "Pure-Julia gradient boosting with native categorical feature handling and symmetric decision trees.",
+    },
+    {
+        href: "https://summerofcode.withgoogle.com/archive/2023/projects/iRxuzeGJ",
+        title: "MLflow for Julia-based data science",
+        desc: "Google Summer of Code 2023. I brought MLflow experiment tracking to the Julia ecosystem.",
+    },
+    {
+        href: "https://github.com/JuliaAI/MLFlowClient.jl",
+        title: "MLFlowClient.jl",
+        desc: "A Julia client for the MLflow REST API.",
+    },
+    {
+        href: "https://github.com/pebeto/ARP.jl",
+        title: "ARP.jl",
+        desc: "Auto-rotating perceptrons in Julia.",
+    },
+    {
+        href: "https://github.com/pebeto/pluto-design-system",
+        title: "pluto-design-system",
+        desc: "A CSS framework in the Pluto.jl aesthetic.",
+    },
+    {
+        href: "https://github.com/pebeto/missyhud.prx",
+        title: "missyhud.prx",
+        desc: "A PSP HUD plugin in C.",
+    },
+    {
+        href: "https://github.com/pebeto/proton-ge-manager",
+        title: "proton-ge-manager",
+        desc: "Painless proton-ge installation for Steam Deck and Linux.",
+    },
+];
+
+const honors = [
+    {
+        title: "Top 10% presentation spot, SMILES 2020",
+        org: "Skolkovo Institute of Science and Technology",
+        date: "August 2020",
+        desc: "Skoltech picked me from more than 2,000 applicants to present a systematic review of convolutional neural networks for respiratory-condition detection.",
+    },
+    {
+        title: "REPU Computer Science selection",
+        org: "Research Experience for Peruvian Undergraduates",
+        date: "October 2020",
+        desc: "I joined as an undergraduate participant and worked under Gisella Bejarano in Arti Ramesh's research lab at Binghamton University.",
+    },
+    {
+        title: "Cybersecurity scholarship",
+        org: "Organization of American States",
+        date: "May 2019",
+        desc: "The OAS gave me a place in Creando una Trayectoria Profesional en Seguridad Digital, which included training at Universidad Federico Villarreal in Lima.",
+    },
+];
+
+const service = [
+    {
+        title: "Judge, REPU Seminar 2026",
+        org: "Research Experience for Peruvian Undergraduates",
+        date: "April 2026",
+        desc: "I evaluated undergraduate research presentations across scientific disciplines and wrote feedback for each participant.",
+    },
+    {
+        title: "Reviewer, IEEE Intercon 2024",
+        org: "IEEE",
+        date: "July 2024",
+        desc: "I reviewed paper submissions for technical accuracy, originality and fit with the conference program.",
+    },
 ];
 ---
 
 <Layout
     title="Portfolio"
-    description="Production ML work, open-source Julia projects, a peer-reviewed publication, and notebooks by Jose Esparza, Senior ML Engineer."
+    description="Publications, production machine learning systems, open-source Julia software and notebooks by Jose Esparza, Senior AI Engineer."
     canonical="/portfolio"
 >
     <main class="max-w-6xl mx-auto px-6 sm:px-12 py-16">
@@ -51,66 +183,77 @@ const projects = [
             <div
                 class="md:w-2/3 md:pl-10 md:border-l md:border-[var(--color-border-light)] space-y-10 mt-12 md:mt-0"
             >
-                <h2 class="text-2xl font-semibold text-[var(--color-heading)]">
-                    Production work
-                </h2>
-                <p class="text-[var(--color-text)]">
-                    Most of what I ship at work is closed-source: production LLM
-                    agents, RAG pipelines, fine-tuned models and data
-                    infrastructure across fintech, edtech and retail. My{" "}
-                    <a href="/resume.pdf" target="_blank">resume</a>{" "}
-                    has the names and dates; below are a few representative
-                    builds.
+                <p class="text-[var(--color-text)] leading-relaxed">
+                    Most of my industry work is closed-source, so I describe those
+                    systems only as far as the work allows. For names and dates,
+                    see my{" "}
+                    <a href="/resume.pdf" target="_blank">resume</a>.
                 </p>
 
-                <div class="space-y-5">
-                    <div>
-                        <span
-                            class="font-semibold text-[var(--color-heading)]"
-                            >Agentic banking assistant</span
-                        >
-                        <span class="text-[var(--color-text-faint)] mx-2">—</span>
-                        <span class="text-sm text-[var(--color-text-muted)]"
-                            >WhatsApp customer support built end to end: a
-                            LangGraph agent over RAG (Postgres/pgvector), with
-                            audio transcription, AWS OTP, scheduled LLM-generated
-                            financial reports, and an MCP server exposing
-                            internal tools.</span
-                        >
-                    </div>
-                    <div>
-                        <span
-                            class="font-semibold text-[var(--color-heading)]"
-                            >Curriculum ML tooling</span
-                        >
-                        <span class="text-[var(--color-text-faint)] mx-2">—</span>
-                        <span class="text-sm text-[var(--color-text-muted)]"
-                            >A transformer recommender surfacing semantically
-                            adjacent lessons with sub-second latency, plus a
-                            fine-tuned Llama 3.1 8B (LoRA) for resource
-                            generation that expert reviewers signed off as
-                            on-voice.</span
-                        >
-                    </div>
-                    <div>
-                        <span
-                            class="font-semibold text-[var(--color-heading)]"
-                            >Retail data pipelines</span
-                        >
-                        <span class="text-[var(--color-text-faint)] mx-2">—</span>
-                        <span class="text-sm text-[var(--color-text-muted)]"
-                            >High-volume AWS ETL (Glue, Athena, Lambda, S3)
-                            ingesting product-availability data from major
-                            retailer B2B platforms, feeding analytics that drove
-                            stakeholder decisions.</span
-                        >
-                    </div>
+                <h2 class="text-2xl font-semibold text-[var(--color-heading)]">
+                    Publications
+                </h2>
+
+                <ol class="space-y-5">
+                    {
+                        publications.map((pub) => (
+                            <li>
+                                <a
+                                    href={pub.href}
+                                    target="_blank"
+                                    class="font-semibold text-[var(--color-heading)]"
+                                >
+                                    {pub.title}
+                                </a>
+                                <p class="text-sm text-[var(--color-text-muted)] mt-1">
+                                    {pub.authors} ({pub.year}). {pub.venue}.
+                                    {pub.doi && (
+                                        <span class="text-[var(--color-text-faint)]">
+                                            {" "}
+                                            doi:{pub.doi}
+                                        </span>
+                                    )}
+                                </p>
+                            </li>
+                        ))
+                    }
+                </ol>
+                <p class="text-sm text-[var(--color-text-faint)]">
+                    <a href="https://orcid.org/0000-0002-9372-3763" target="_blank"
+                        >ORCID 0000-0002-9372-3763 ↗</a
+                    >
+                </p>
+
+                <h2
+                    class="text-2xl font-semibold text-[var(--color-heading)] pt-6"
+                >
+                    Production systems
+                </h2>
+
+                <div class="space-y-6">
+                    {
+                        systems.map((system) => (
+                            <div>
+                                <div class="flex items-baseline gap-2 flex-wrap">
+                                    <span class="font-semibold text-[var(--color-heading)]">
+                                        {system.title}
+                                    </span>
+                                    <span class="text-xs uppercase tracking-wider text-[var(--color-text-faint)]">
+                                        {system.org}
+                                    </span>
+                                </div>
+                                <p class="text-sm text-[var(--color-text-muted)] mt-1 leading-relaxed">
+                                    {system.desc}
+                                </p>
+                            </div>
+                        ))
+                    }
                 </div>
 
                 <h2
                     class="text-2xl font-semibold text-[var(--color-heading)] pt-6"
                 >
-                    Open-source projects
+                    Open-source software
                 </h2>
 
                 <div class="space-y-5">
@@ -124,94 +267,32 @@ const projects = [
                                 >
                                     {project.title}
                                 </a>
-                                <span class="text-[var(--color-text-faint)] mx-2">
-                                    —
-                                </span>
-                                <span class="text-sm text-[var(--color-text-muted)]">
+                                <p class="text-sm text-[var(--color-text-muted)] mt-1 leading-relaxed">
                                     {project.desc}
-                                </span>
+                                </p>
                             </div>
                         ))
                     }
                 </div>
 
                 <p class="text-[var(--color-text)]">
-                    More in my{" "}
+                    Further repositories are on my{" "}
                     <a href="https://github.com/pebeto" target="_blank"
-                        >GitHub Profile</a
+                        >GitHub profile</a
                     >.
                 </p>
 
                 <h2
                     class="text-2xl font-semibold text-[var(--color-heading)] pt-6"
                 >
-                    Research & recognition
-                </h2>
-
-                <div class="space-y-5">
-                    <div>
-                        <a
-                            href="https://link.springer.com/chapter/10.1007/978-3-030-91434-9_18"
-                            target="_blank"
-                            class="font-semibold text-[var(--color-heading)]"
-                        >
-                            Understanding the Issues Surrounding COVID-19 Vaccine
-                            Roll Out via User Tweets
-                        </a>
-                        <span class="text-[var(--color-text-faint)] mx-2">—</span>
-                        <span class="text-sm text-[var(--color-text-muted)]">
-                            Peer-reviewed paper at CSoNet 2021, indexed in the{" "}
-                            <a
-                                href="https://pesquisa.bvsalud.org/global-literature-on-novel-coronavirus-2019-ncov/resource/pt/covidwho-1593151?lang=en"
-                                target="_blank"
-                            >
-                                WHO COVID-19 Research Database
-                            </a>.
-                        </span>
-                    </div>
-                    <div>
-                        <a
-                            href="https://summerofcode.withgoogle.com/archive/2023/projects/iRxuzeGJ"
-                            target="_blank"
-                            class="font-semibold text-[var(--color-heading)]"
-                        >
-                            Empowering Julia-based Data Science with MLflow
-                        </a>
-                        <span class="text-[var(--color-text-faint)] mx-2">—</span>
-                        <span class="text-sm text-[var(--color-text-muted)]">
-                            Google Summer of Code 2023, bringing MLflow
-                            experiment tracking to the Julia ecosystem.
-                        </span>
-                    </div>
-                    <div>
-                        <a
-                            href="https://smiles.skoltech.ru/school-2020"
-                            target="_blank"
-                            class="font-semibold text-[var(--color-heading)]"
-                        >
-                            Convolutional Neural Networks in Respiratory
-                            Conditions Detection: A Systematic Review of the Last
-                            4 Years
-                        </a>
-                        <span class="text-[var(--color-text-faint)] mx-2">—</span>
-                        <span class="text-sm text-[var(--color-text-muted)]">
-                            Research poster at SMILES 2020 (Skoltech), selected
-                            in the top 10% of 2,000+ applicants.
-                        </span>
-                    </div>
-                </div>
-
-                <h2
-                    class="text-2xl font-semibold text-[var(--color-heading)] pt-6"
-                >
                     Notebooks
                 </h2>
-                <p class="text-[var(--color-text)]">
-                    I rebuilt some classic Python notebooks in{" "}
+                <p class="text-[var(--color-text)] leading-relaxed">
+                    I reimplemented classic teaching notebooks in{" "}
                     <a href="https://julialang.org/" target="_blank">Julia</a>{" "}
-                    using{" "}
-                    <a href="https://plutojl.org/" target="_blank">Pluto.jl</a>{" "}
-                    for the reactive UX. Pick a topic.
+                    with{" "}
+                    <a href="https://plutojl.org/" target="_blank">Pluto.jl</a>,
+                    which keeps them reactive and reproducible.
                 </p>
 
                 <div class="space-y-8">
@@ -245,33 +326,49 @@ const projects = [
                 <h2
                     class="text-2xl font-semibold text-[var(--color-heading)] pt-6"
                 >
-                    Service
+                    Honors and awards
                 </h2>
 
-                <div class="space-y-5">
-                    <div>
-                        <span
-                            class="font-semibold text-[var(--color-heading)]"
-                            >REPU Seminar 2026 Judge</span
-                        >
-                        <span class="text-[var(--color-text-faint)] mx-2">—</span>
-                        <span class="text-sm text-[var(--color-text-muted)]">
-                            Evaluated undergraduate research presentations for the
-                            Research Experience for Peruvian Undergraduates. April
-                            2026.
-                        </span>
-                    </div>
-                    <div>
-                        <span
-                            class="font-semibold text-[var(--color-heading)]"
-                            >IEEE Intercon 2024 Reviewer</span
-                        >
-                        <span class="text-[var(--color-text-faint)] mx-2">—</span>
-                        <span class="text-sm text-[var(--color-text-muted)]">
-                            Reviewed conference paper submissions for technical
-                            accuracy and originality. July 2024.
-                        </span>
-                    </div>
+                <div class="space-y-6">
+                    {
+                        honors.map((honor) => (
+                            <div>
+                                <span class="font-semibold text-[var(--color-heading)]">
+                                    {honor.title}
+                                </span>
+                                <p class="text-xs uppercase tracking-wider text-[var(--color-text-faint)] mt-1">
+                                    {honor.org} · {honor.date}
+                                </p>
+                                <p class="text-sm text-[var(--color-text-muted)] mt-2 leading-relaxed">
+                                    {honor.desc}
+                                </p>
+                            </div>
+                        ))
+                    }
+                </div>
+
+                <h2
+                    class="text-2xl font-semibold text-[var(--color-heading)] pt-6"
+                >
+                    Academic service
+                </h2>
+
+                <div class="space-y-6">
+                    {
+                        service.map((item) => (
+                            <div>
+                                <span class="font-semibold text-[var(--color-heading)]">
+                                    {item.title}
+                                </span>
+                                <p class="text-xs uppercase tracking-wider text-[var(--color-text-faint)] mt-1">
+                                    {item.org} · {item.date}
+                                </p>
+                                <p class="text-sm text-[var(--color-text-muted)] mt-2 leading-relaxed">
+                                    {item.desc}
+                                </p>
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         </div>
